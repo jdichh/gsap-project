@@ -74,4 +74,16 @@ select {
 }
 .webGL {
   outline: 2px solid green;
+}
+
+#stripes {
+  position: fixed;
+  width: 50px;
+  height: 100vh;
+  left: 15%;
+  background: linear-gradient(to right, #6E936F 65%, #7E685A 35%);
+}
+
+body {
+  background-color: #F5F5F5;
 }/*# sourceMappingURL=styles.css.map */

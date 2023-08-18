@@ -1,0 +1,13 @@
+@use "../global/colors";
+
+#stripes {
+  position: fixed;
+  width: 50px;
+  height: 100vh;
+  left: 15%;
+  background: linear-gradient(
+    to right,
+    colors.$muted-green 65%,
+    colors.$subtle-brown 35%
+  );
+}
