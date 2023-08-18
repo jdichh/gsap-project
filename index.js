@@ -25,6 +25,17 @@ scene.add(cube);
 
 camera.position.z = 5;
 
+window.addEventListener("resize", () => {
+    // Update the renderer size
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Update the camera's aspect ratio
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+});
+
+
 function animate() {
 	requestAnimationFrame(animate);
 
