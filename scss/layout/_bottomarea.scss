@@ -1,0 +1,23 @@
+@use "../global/colors";
+
+.media {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: block;
+      margin-right: 10px;
+
+      a {
+        padding-block: 1rem;
+        font-size: 28px;
+        color: colors.$muted-brown;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use '../global/typography';
+
+.main-content {
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    transform: translateY(-50%);
+    max-width: 40%;
+    z-index: 5;
+
+  .main-content__title {
+    text-align: right;
+    font-family: "Old Standard TT", serif;
+    font-size: 2.5rem;
+  }
+
+  .main-content__text {
+    font-size: 1.3rem;
+   
+  }
+}

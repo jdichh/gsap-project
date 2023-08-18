@@ -78,7 +78,7 @@ Promise.all([
   });
 
 ///// Instantiate lights
-const DIRECTIONAL_LIGHT_INTENSITY = 2.5;
+const DIRECTIONAL_LIGHT_INTENSITY = 3;
 const AMBIENT_LIGHT_INTENSITY = 1;
 const DEFAULT_SPOTLIGHT_INTENSITY = 40; // Will be overridden by the spotlightParams below.
 const WHITE_LIGHTING = 0xffffff;
@@ -163,13 +163,13 @@ const BRASS = "#B8A373";
 
 const spotlightParams = {
   rightSpotlightColor: BRASS,
-  rightSpotlightIntensity: 40,
+  rightSpotlightIntensity: 21,
   rightSpotlightAngle: 1,
   rightSpotlightPenumbra: 0.65,
   rightSpotlightDistance: 15,
 
   leftSpotlightColor: BRASS,
-  leftSpotlightIntensity: 40,
+  leftSpotlightIntensity: 21,
   leftSpotlightAngle: 1,
   leftSpotlightPenumbra: 0.65,
   leftSpotlightDistance: 15,

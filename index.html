@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Experience the art of time and fine craftsmanship of Kronomachina steampunk wristwatches."
+      content="Experience the art of time and fine craftsmanship of the Kronomachina 1 wristwatch."
     />
     <link rel="stylesheet" href="compiled-scss/styles.css" />
     <link
@@ -15,19 +15,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Kronomachina Brass 1</title>
+    <title>Kronomachina 1</title>
   </head>
   <body>
     <div id="warning"></div>
-    <div class="container">
-      <div id="stripes"></div>
 
+    <div>
+      <div id="stripes"></div>
       <nav>
         <div class="logo">
-          <span>KRONOMACHINA</span>
+          <h1>KRONOMACHINA</h1>
         </div>
         <ul>
-          <li><a href=""></a>Order</li>
+          <li><a href="#" class="order-button">Order</a></li>
         </ul>
       </nav>
 
@@ -37,24 +37,34 @@
           alt="A loading spinner."
           id="loading-spinner"
         />
-        </div>
-        <div class="canvas-container"></div>
-      
+      </div>
+      <div class="canvas-container"></div>
 
-      <div class="name">
-        <h1>KRONOMACHINA BRASS 1</h1>
+      <div class="main-content">
+        <h1 class="main-content__title">KRONOMACHINA 1</h1>
+        <p class="main-content__text">
+          Experience the fusion of history and innovation with our exquisite
+          collection of steampunk wristwatches. Forged with meticulous attention to
+          detail, each timepiece embodies the spirit of an era where brass,
+          gears, and imagination reign supreme. We pay homage to the
+          age of steam and machinery while offering modern precision and
+          reliability. Embrace a journey through time as you adorn your wrist
+          with a piece that seamlessly blends the past and the present,
+          setting you apart from the pack.
+        </p>
       </div>
 
       <div class="media">
         <ul>
-          <li><i class="fa-brands fa-linkedin-in"></i></li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-tiktok"></i></li>
+          <li><a href="https://www.linkedin.com/in/jason-dichoso-a97a0026a/" target="_blank" class="fa-brands fa-linkedin-in" ></a></li>
+          <li><a href="#" class="fa-brands fa-facebook"></a></li>
+          <li><a href="#" class="fa-brands fa-instagram"></a></li>
+          <li><a href="#" class="fa-brands fa-tiktok"></a></li>
         </ul>
       </div>
-      <script type="module" src="gsap.js" defer></script>
-      <script type="module" src="index.js" defer></script>
     </div>
+
+    <script type="module" src="gsap.js" defer></script>
+    <script type="module" src="index.js" defer></script>
   </body>
 </html>
