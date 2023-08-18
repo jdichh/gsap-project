@@ -48,7 +48,7 @@ Promise.all([
     watch.position.z = 0.9; // Increase to move to the left, and decrease to move to the right.
 
     watch.rotation.x = 1.5;
-    watch.rotation.y = 1.55; // Positive for clockwise, negative for counter-clockwise, 
+    watch.rotation.y = 1.57; // Positive for counter-clockwise, negative for clockwise.
     watch.rotation.z = 0.075; // Positive for downwards, negative for upwards.
 
     watch.scale.set(1.2, 1.2, 1.2);
