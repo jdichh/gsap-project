@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -76,6 +77,29 @@ select {
   outline: 2px solid green;
 }
 
+.webgl-warning {
+  display: none;
+}
+
+.webgl-warning-visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.webgl-warning-visible p {
+  margin: 0;
+  padding: 20px;
+}
+
 #stripes {
   position: fixed;
   width: 50px;
@@ -84,6 +108,12 @@ select {
   background: linear-gradient(to right, #6E936F 65%, #7E685A 35%);
 }
 
+html,
 body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
   background-color: #F5F5F5;
+  font-family: "Arvo", serif;
 }/*# sourceMappingURL=styles.css.map */

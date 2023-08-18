@@ -1,12 +1,26 @@
-// html,
-// body {
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden;
-//   min-height: 100vh;
-//   background-color: rgba(8, 8, 8);
-// }
-
 .webGL {
   outline: 2px solid green;
+}
+
+.webgl-warning {
+  display: none;
+}
+
+.webgl-warning-visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.webgl-warning-visible p {
+  margin: 0;
+  padding: 20px;
 }

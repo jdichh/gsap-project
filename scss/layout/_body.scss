@@ -1,5 +1,12 @@
 @use '../global/colors';
+@use '../global/typography';
 
-body{
-    background-color: colors.$off-white;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: colors.$off-white;
+  font-family: 'Arvo', serif;
 }
