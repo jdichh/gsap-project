@@ -71,4 +71,7 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.webGL {
+  outline: 2px solid green;
 }/*# sourceMappingURL=styles.css.map */
