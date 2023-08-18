@@ -8,7 +8,6 @@
 
   ul {
     list-style: none;
-
     li {
       display: block;
       margin-right: 10px;
@@ -17,6 +16,10 @@
         padding-block: 1rem;
         font-size: 28px;
         color: colors.$muted-brown;
+
+        &:hover {
+          color: colors.$light-gold;
+        }
       }
     }
   }
