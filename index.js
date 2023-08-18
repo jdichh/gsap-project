@@ -15,6 +15,7 @@ let watch;
 let angle = 0;
 const center = new THREE.Vector3();
 const container = document.querySelector(".canvas-container");
+const canvas = document.querySelector(".webGL");
 const loader = new GLTFLoader();
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -24,6 +25,7 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
   alpha: true,
   antialias: true,
 });
@@ -35,6 +37,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.5;
 
 renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 container.appendChild(renderer.domElement);
 
 ///// Load watch model
@@ -71,6 +74,7 @@ Promise.all([
     loadingSpinner.style.display = "none";
     container.style.display = "block";
 
+    scaleModel();
     showOnCanvas();
   })
   .catch((error) => {
@@ -149,14 +153,45 @@ scene.add(leftSpotlight);
 scene.add(rightSpotlight);
 scene.add(rearSpotlight);
 
-///// Fix canvas aspect ratio on window resizes
-window.addEventListener("resize", () => {
-  renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+///// Responsiveness
+const minScale = 0.7;
+const maxScale = 1.2;
+let currentScale = 1.2;
 
-  camera.aspect = container.clientWidth / container.clientHeight;
+function updateModelScale(scale) {
+  scale = Math.max(minScale, Math.min(maxScale, scale));
+
+  watch.scale.set(scale, scale, scale);
+}
+
+function scaleModel() {
+  const scaleFactor = container.clientWidth / 600;
+  currentScale = scaleFactor;
+  updateModelScale(currentScale);
+}
+
+function increaseScale() {
+  currentScale += 0.1;
+  updateModelScale(currentScale);
+}
+
+function decreaseScale() {
+  currentScale -= 0.1;
+  updateModelScale(currentScale);
+}
+
+window.addEventListener("resize", () => {
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio);
+
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
+
+  scaleModel();
 });
+
 
 const WHITE = "#FFFFFF";
 const BRASS = "#B8A373";
@@ -169,7 +204,7 @@ const spotlightParams = {
   rightSpotlightDistance: 15,
 
   leftSpotlightColor: BRASS,
-  leftSpotlightIntensity: 21,
+  leftSpotlightIntensity: 2,
   leftSpotlightAngle: 1,
   leftSpotlightPenumbra: 0.65,
   leftSpotlightDistance: 15,

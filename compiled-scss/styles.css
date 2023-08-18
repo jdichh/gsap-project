@@ -82,6 +82,7 @@ select {
   height: 70%;
   overflow: hidden;
   z-index: 3;
+  outline: 2px solid #A54030;
 }
 
 .canvas {
@@ -203,10 +204,11 @@ ul a {
 .main-content {
   position: fixed;
   top: 50%;
-  left: 47%;
+  left: 45%;
   transform: translateY(-50%);
-  max-width: 40%;
+  max-width: 50%;
   z-index: 5;
+  outline: 2px solid #A54030;
 }
 .main-content .main-content__title {
   text-align: right;

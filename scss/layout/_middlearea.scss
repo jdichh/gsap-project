@@ -1,12 +1,14 @@
 @use '../global/typography';
+@use '../global/colors';
 
 .main-content {
     position: fixed;
     top: 50%;
-    left: 47%;
+    left: 45%;
     transform: translateY(-50%);
-    max-width: 40%;
+    max-width: 50%;
     z-index: 5;
+    outline: 2px solid colors.$rusted-red;
 
   .main-content__title {
     text-align: right;
