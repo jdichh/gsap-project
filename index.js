@@ -165,18 +165,8 @@ function updateModelScale(scale) {
 }
 
 function scaleModel() {
-  const scaleFactor = container.clientWidth / 600;
+  const scaleFactor = container.clientWidth / 575;
   currentScale = scaleFactor;
-  updateModelScale(currentScale);
-}
-
-function increaseScale() {
-  currentScale += 0.1;
-  updateModelScale(currentScale);
-}
-
-function decreaseScale() {
-  currentScale -= 0.1;
   updateModelScale(currentScale);
 }
 
@@ -353,7 +343,7 @@ rearSpotlight.angle = spotlightParams.rearSpotlightAngle;
 rearSpotlight.penumbra = spotlightParams.rearSpotlightPenumbra;
 rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 
-const distance = 18; // Distance to model.
+const distance = 20; // Distance to model.
 
 function showOnCanvas() {
   // controls.update();

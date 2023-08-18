@@ -52,3 +52,29 @@ gsap.fromTo(".canvas-container",{
   duration: 0.5,
 }
 );
+
+gsap.fromTo("nav",{
+  opacity: 0,
+  x: 800,
+},
+{
+  opacity: 1,
+  x: 0,
+  delay: 3,
+  ease: "expo.inOut",
+  duration: 0.5,
+}
+);
+
+gsap.fromTo(".main-content",{
+  opacity: 0,
+  x: 800,
+},
+{
+  opacity: 1,
+  x: 0,
+  delay: 3.5,
+  ease: "expo.inOut",
+  duration: 0.5,
+}
+);

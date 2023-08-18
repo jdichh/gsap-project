@@ -1,25 +1,30 @@
 @use "../global/colors";
 
-.stripe__one {
-  position: fixed;
-  width: 50px;
-  height: 100vh;
-  left: 16vw;
-  background-color: colors.$rusted-red;
+#stripes {
+  .stripe__one {
+    position: fixed;
+    width: 60px;
+    height: 100vh;
+    left: 0;
+    background-color: colors.$rusted-red;
+  }
+  
+  .stripe__two {
+    position: fixed;
+    width: 60px;
+    left: 3vw;
+    height: 100vh;
+    background-color: colors.$brass;
+  }
+  
+  .stripe__three {
+    position: fixed;
+    width: 60px;
+    left: 6vw;
+    height: 100vh;
+    background-color: colors.$teal;
+  }
+  transform: skew(45deg);
 }
 
-.stripe__two {
-  position: fixed;
-  width: 50px;
-  left: 19vw;
-  height: 100vh;
-  background-color: colors.$brass;
-}
 
-.stripe__three {
-  position: fixed;
-  width: 50px;
-  left: 22vw;
-  height: 100vh;
-  background-color: colors.$teal;
-}

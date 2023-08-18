@@ -1,0 +1,41 @@
+@use "../global/typography";
+@use "../global/colors";
+
+.main-content {
+  position: fixed;
+  top: 50vh;
+  right: 10vw;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+
+  .main-content__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+
+  .main-content__text__one {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .main-content__order__button {
+    text-decoration: none;
+    transition: 0.1s;
+    float: right;
+    padding: 0.7rem 1.4rem;
+    border-radius: 2px;
+    font-size: 1.2rem;
+
+    background-color: colors.$vintage-black;
+    color: colors.$parchment;
+
+    &:hover,
+    &:focus {
+      background-color: colors.$teal;
+      color: colors.$parchment;
+    }
+  }
+}
