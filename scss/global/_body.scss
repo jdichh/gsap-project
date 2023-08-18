@@ -1,5 +1,5 @@
-@use '../global/colors';
-@use '../global/typography';
+@use 'colors';
+@use 'typography';
 
 html,
 body {
@@ -7,7 +7,8 @@ body {
   padding: 0;
   overflow: hidden;
   min-height: 100vh;
-  background-color: colors.$parchment;
+  min-width: 100vw;
   font-family: 'League Spartan', sans-serif;
+  background-color: colors.$parchment;
   color: colors.$vintage-black;
 }

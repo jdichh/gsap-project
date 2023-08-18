@@ -1,15 +1,25 @@
 @use "../global/colors";
 
-#stripes {
+.stripe__one {
   position: fixed;
-  width: 300px;
+  width: 50px;
   height: 100vh;
-  left: 14%;
-  background: linear-gradient(
-    to right,
-    colors.$muted-brown 50%,
-    colors.$light-gold 50%,
-  );
-  transform: skewX(-45deg);
-  z-index: 1;
+  left: 16vw;
+  background-color: colors.$rusted-red;
+}
+
+.stripe__two {
+  position: fixed;
+  width: 50px;
+  left: 19vw;
+  height: 100vh;
+  background-color: colors.$brass;
+}
+
+.stripe__three {
+  position: fixed;
+  width: 50px;
+  left: 22vw;
+  height: 100vh;
+  background-color: colors.$teal;
 }

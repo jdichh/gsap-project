@@ -54,7 +54,7 @@ Promise.all([
     watch.rotation.x = 1.5;
     // Positive for counter-clockwise, negative for counter-clockwise.
     watch.rotation.y = 1.57; 
-    //watch.rotation.y = -0.8
+    // watch.rotation.y = -0.8
     
     // Positive for downwards, negative for upwards.
     watch.rotation.z = 0.1; 
@@ -154,7 +154,7 @@ scene.add(rightSpotlight);
 scene.add(rearSpotlight);
 
 ///// Responsiveness
-const minScale = 0.7;
+const minScale = 1;
 const maxScale = 1.2;
 let currentScale = 1.2;
 
@@ -353,13 +353,13 @@ rearSpotlight.angle = spotlightParams.rearSpotlightAngle;
 rearSpotlight.penumbra = spotlightParams.rearSpotlightPenumbra;
 rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 
-const distance = 20; // Distance to model.
+const distance = 18; // Distance to model.
 
 function showOnCanvas() {
   // controls.update();
   // updateDirectionalLight();
 
-  angle += 0.0015;
+  angle += 0.002;
   const x = center.x + distance * Math.cos(angle);
   const z = center.z + distance * Math.sin(angle);
   camera.position.set(x, center.y, z);

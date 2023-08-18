@@ -1,72 +1,54 @@
 import gsap from "gsap";
 
-gsap.fromTo("#stripes",{
+gsap.fromTo(".stripe__one",{
     opacity: 0,
-    x: 100,
-    y: -100,
+    y: -800,
   },
   {
     opacity: 1,
-    x: 0,
     y: 0,
-    delay: 1.25,
+    delay: 1.5,
     ease: "expo.inOut",
     duration: 0.5,
   }
 );
 
-gsap.fromTo(".media",{
+gsap.fromTo(".stripe__two",{
   opacity: 0,
-  x: 100,
+  y: 800,
 },
 {
   opacity: 1,
-  x: 0,
+
   y: 0,
-  delay: 1.5,
+  delay: 2,
   ease: "expo.inOut",
-  duration: 1,
+  duration: 0.5,
 }
 );
 
-gsap.fromTo("nav",{
+gsap.fromTo(".stripe__three",{
   opacity: 0,
-  y: -100,
+  y: -800,
 },
 {
   opacity: 1,
-  x: 0,
   y: 0,
-  delay: 1.5,
+  delay: 2.5,
   ease: "expo.inOut",
-  duration: 1,
-}
-);
-
-gsap.fromTo(".main-content",{
-  opacity: 0,
-  x: 500,
-},
-{
-  opacity: 1,
-  x: 0,
-  y: 0,
-  delay: 1.5,
-  ease: "expo.inOut",
-  duration: 1,
+  duration: 0.5,
 }
 );
 
 gsap.fromTo(".canvas-container",{
   opacity: 0,
-  x: -500,
+  x: -800,
 },
 {
   opacity: 1,
   x: 0,
-  y: 0,
-  delay: 1.5,
+  delay: 1,
   ease: "expo.inOut",
-  duration: 1,
+  duration: 0.5,
 }
 );
