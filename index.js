@@ -316,7 +316,7 @@ function showOnCanvas() {
   controls.update();
   updateDirectionalLight();
 
-  angle += 0.002;
+  angle += 0.0015;
   const x = center.x + distance * Math.cos(angle);
   const z = center.z + distance * Math.sin(angle);
   camera.position.set(x, center.y, z);
