@@ -75,13 +75,12 @@ select {
 }
 .canvas-container {
   position: fixed;
-  top: 50%; /* Adjust this value if needed */
+  top: 50%;
   left: 4.5vw;
   transform: translateY(-50%);
   width: 35%;
   height: 70%;
   overflow: hidden;
-  outline: 2px solid green;
 }
 
 .canvas {
@@ -103,7 +102,7 @@ select {
   display: flex;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #F5EDE1;
   font-size: 24px;
   text-align: center;
 }
@@ -115,10 +114,11 @@ select {
 
 #stripes {
   position: fixed;
-  width: 50px;
+  width: 200px;
   height: 100vh;
-  left: 15.5%;
-  background: linear-gradient(to right, #6B4E38 65%, #B08E60 35%);
+  left: 16.75%;
+  background: linear-gradient(to right, #6B4E38 75%, #B08E60 25%);
+  z-index: 0;
 }
 
 html,
@@ -129,4 +129,31 @@ body {
   min-height: 100vh;
   background-color: #F5EDE1;
   font-family: "Arvo", serif;
+}
+
+#loading-container {
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#loading-spinner {
+  width: 49px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */

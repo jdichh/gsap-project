@@ -38,6 +38,7 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
 ///// Load watch model
+const loadingSpinner = document.getElementById('loading-spinner');
 Promise.all([
   new Promise((resolve) => loader.load("/steampunk_watch_4k.glb", resolve)),
 ])
@@ -48,8 +49,12 @@ Promise.all([
     watch.position.z = 0.9; // Increase to move to the left, and decrease to move to the right.
 
     watch.rotation.x = 1.5;
-    watch.rotation.y = 1.57; // Positive for counter-clockwise, negative for clockwise.
-    watch.rotation.z = 0.075; // Positive for downwards, negative for upwards.
+    // Positive for counter-clockwise, negative for counter-clockwise.
+    watch.rotation.y = 1.57; 
+    //watch.rotation.y = -0.8
+    
+    // Positive for downwards, negative for upwards.
+    watch.rotation.z = 0.1; 
 
     watch.scale.set(1.2, 1.2, 1.2);
 
@@ -62,6 +67,9 @@ Promise.all([
     });
 
     scene.add(watch);
+
+    loadingSpinner.style.display = "none";
+    container.style.display = "block";
 
     showOnCanvas();
   })

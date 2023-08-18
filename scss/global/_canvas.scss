@@ -1,12 +1,14 @@
+@use "../global/colors";
+
 .canvas-container {
   position: fixed;
-  top: 50%; /* Adjust this value if needed */
+  top: 50%;
   left: 4.5vw;
   transform: translateY(-50%);
   width: 35%;
   height: 70%;
   overflow: hidden;
-  outline: 2px solid green;
+  // outline: 2px solid colors.$rusted-red
 }
 
 .canvas {
@@ -28,7 +30,7 @@
   display: flex;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: colors.$parchment;
   font-size: 24px;
   text-align: center;
 }
