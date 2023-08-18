@@ -76,10 +76,10 @@ select {
 .canvas-container {
   position: fixed;
   top: 50%; /* Adjust this value if needed */
-  left: 5vw;
+  left: 4.5vw;
   transform: translateY(-50%);
-  width: 25%;
-  height: 75%;
+  width: 35%;
+  height: 70%;
   overflow: hidden;
   outline: 2px solid green;
 }
@@ -117,8 +117,8 @@ select {
   position: fixed;
   width: 50px;
   height: 100vh;
-  left: 15%;
-  background: linear-gradient(to right, #6E936F 65%, #7E685A 35%);
+  left: 15.5%;
+  background: linear-gradient(to right, #6B4E38 65%, #B08E60 35%);
 }
 
 html,
@@ -127,6 +127,6 @@ body {
   padding: 0;
   overflow: hidden;
   min-height: 100vh;
-  background-color: #F5F5F5;
+  background-color: #F5EDE1;
   font-family: "Arvo", serif;
 }/*# sourceMappingURL=styles.css.map */
