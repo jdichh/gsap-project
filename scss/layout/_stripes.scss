@@ -2,14 +2,14 @@
 
 #stripes {
   position: fixed;
-  width: 200px;
+  width: 400px;
   height: 100vh;
-  left: 16.75%;
+  left: 13.75%;
   background: linear-gradient(
     to right,
-    colors.$muted-brown 75%,
-    colors.$light-gold 25%,
+    colors.$muted-brown 90%,
+    colors.$light-gold 10%,
   );
-
+  transform: skewX(-45deg);
   z-index: 0;
 }

@@ -40,7 +40,7 @@ container.appendChild(renderer.domElement);
 ///// Load watch model
 const loadingSpinner = document.getElementById('loading-spinner');
 Promise.all([
-  new Promise((resolve) => loader.load("/steampunk_watch_4k.glb", resolve)),
+  new Promise((resolve) => loader.load("/steampunk_watch.glb", resolve)),
 ])
   .then(([gltf1]) => {
     watch = gltf1.scene;
@@ -108,7 +108,7 @@ const rearSpotlight = new THREE.SpotLight(
 ///// Light configurations
 directionalLight.position.set(12, 25, 50);
 directionalLight.castShadow = true;
-directionalLight.shadow.bias = -0.001;
+directionalLight.shadow.bias = -0.001; // Fixes shadow artifacts.
 directionalLight.shadow.mapSize.width = 1024;
 directionalLight.shadow.mapSize.height = 1024;
 directionalLight.shadow.camera.left = -10;
@@ -136,7 +136,7 @@ leftSpotlight.shadow.mapSize.height = 1024;
 
 rearSpotlight.position.set(0, 0, -5);
 rearSpotlight.castShadow = true;
-rearSpotlight.shadow.bias = -0.001;
+rearSpotlight.shadow.bias = -0.001; // Fixes shadow artifacts.
 rearSpotlight.shadow.mapSize.width = 1024;
 rearSpotlight.shadow.mapSize.height = 1024;
 rearSpotlight.shadow.camera.near = 0.5;
@@ -182,122 +182,122 @@ const spotlightParams = {
 };
 
 ///// DevTools Area
-const controls = new OrbitControls(camera, container);
-controls.enableDamping = true;
-camera.position.z = 5;
+// const controls = new OrbitControls(camera, container);
+// controls.enableDamping = true;
+// camera.position.z = 5;
 
-const lightParameters = {
-  lightIntensity: DIRECTIONAL_LIGHT_INTENSITY,
-  lightX: directionalLight.position.x,
-  lightY: directionalLight.position.y,
-  lightZ: directionalLight.position.z,
-};
+// const lightParameters = {
+//   lightIntensity: DIRECTIONAL_LIGHT_INTENSITY,
+//   lightX: directionalLight.position.x,
+//   lightY: directionalLight.position.y,
+//   lightZ: directionalLight.position.z,
+// };
 
-function updateDirectionalLight() {
-  directionalLight.intensity = lightParameters.lightIntensity;
-  directionalLight.position.set(
-    lightParameters.lightX,
-    lightParameters.lightY,
-    lightParameters.lightZ
-  );
-}
+// function updateDirectionalLight() {
+//   directionalLight.intensity = lightParameters.lightIntensity;
+//   directionalLight.position.set(
+//     lightParameters.lightX,
+//     lightParameters.lightY,
+//     lightParameters.lightZ
+//   );
+// }
 
-/// Enable DEV gui
-const gui = new GUI();
-const lightFolder = gui.addFolder("Directional Light");
-lightFolder
-  .add(lightParameters, "lightIntensity", 0, 10)
-  .onChange(updateDirectionalLight);
-lightFolder
-  .add(lightParameters, "lightX", -50, 50)
-  .onChange(updateDirectionalLight);
-lightFolder
-  .add(lightParameters, "lightY", -50, 50)
-  .onChange(updateDirectionalLight);
-lightFolder
-  .add(lightParameters, "lightZ", -50, 50)
-  .onChange(updateDirectionalLight);
+// /// Enable DEV gui
+// const gui = new GUI();
+// const lightFolder = gui.addFolder("Directional Light");
+// lightFolder
+//   .add(lightParameters, "lightIntensity", 0, 10)
+//   .onChange(updateDirectionalLight);
+// lightFolder
+//   .add(lightParameters, "lightX", -50, 50)
+//   .onChange(updateDirectionalLight);
+// lightFolder
+//   .add(lightParameters, "lightY", -50, 50)
+//   .onChange(updateDirectionalLight);
+// lightFolder
+//   .add(lightParameters, "lightZ", -50, 50)
+//   .onChange(updateDirectionalLight);
 
-const rightSpotlightFolder = gui.addFolder("Right Spotlight");
-rightSpotlightFolder
-  .addColor(spotlightParams, "rightSpotlightColor")
-  .onChange(() => {
-    rightSpotlight.color.set(spotlightParams.rightSpotlightColor);
-  });
-rightSpotlightFolder
-  .add(spotlightParams, "rightSpotlightIntensity", 0, 50)
-  .onChange(() => {
-    rightSpotlight.intensity = spotlightParams.rightSpotlightIntensity;
-  });
-rightSpotlightFolder
-  .add(spotlightParams, "rightSpotlightAngle", 0, Math.PI)
-  .onChange(() => {
-    rightSpotlight.angle = spotlightParams.rightSpotlightAngle;
-  });
-rightSpotlightFolder
-  .add(spotlightParams, "rightSpotlightPenumbra", 0, 2)
-  .onChange(() => {
-    rightSpotlight.penumbra = spotlightParams.rightSpotlightPenumbra;
-  });
-rightSpotlightFolder
-  .add(spotlightParams, "rightSpotlightDistance", 1, 50)
-  .onChange(() => {
-    rightSpotlight.distance = spotlightParams.rightSpotlightDistance;
-  });
+// const rightSpotlightFolder = gui.addFolder("Right Spotlight");
+// rightSpotlightFolder
+//   .addColor(spotlightParams, "rightSpotlightColor")
+//   .onChange(() => {
+//     rightSpotlight.color.set(spotlightParams.rightSpotlightColor);
+//   });
+// rightSpotlightFolder
+//   .add(spotlightParams, "rightSpotlightIntensity", 0, 50)
+//   .onChange(() => {
+//     rightSpotlight.intensity = spotlightParams.rightSpotlightIntensity;
+//   });
+// rightSpotlightFolder
+//   .add(spotlightParams, "rightSpotlightAngle", 0, Math.PI)
+//   .onChange(() => {
+//     rightSpotlight.angle = spotlightParams.rightSpotlightAngle;
+//   });
+// rightSpotlightFolder
+//   .add(spotlightParams, "rightSpotlightPenumbra", 0, 2)
+//   .onChange(() => {
+//     rightSpotlight.penumbra = spotlightParams.rightSpotlightPenumbra;
+//   });
+// rightSpotlightFolder
+//   .add(spotlightParams, "rightSpotlightDistance", 1, 50)
+//   .onChange(() => {
+//     rightSpotlight.distance = spotlightParams.rightSpotlightDistance;
+//   });
 
-const leftSpotlightFolder = gui.addFolder("Left Spotlight");
-leftSpotlightFolder
-  .addColor(spotlightParams, "leftSpotlightColor")
-  .onChange(() => {
-    leftSpotlight.color.set(spotlightParams.leftSpotlightColor);
-  });
-leftSpotlightFolder
-  .add(spotlightParams, "leftSpotlightIntensity", 0, 50)
-  .onChange(() => {
-    leftSpotlight.intensity = spotlightParams.leftSpotlightIntensity;
-  });
-leftSpotlightFolder
-  .add(spotlightParams, "leftSpotlightAngle", 0, Math.PI)
-  .onChange(() => {
-    leftSpotlight.angle = spotlightParams.leftSpotlightAngle;
-  });
-leftSpotlightFolder
-  .add(spotlightParams, "leftSpotlightPenumbra", 0, 2)
-  .onChange(() => {
-    leftSpotlight.penumbra = spotlightParams.leftSpotlightPenumbra;
-  });
-leftSpotlightFolder
-  .add(spotlightParams, "leftSpotlightDistance", 1, 50)
-  .onChange(() => {
-    leftSpotlight.distance = spotlightParams.leftSpotlightDistance;
-  });
+// const leftSpotlightFolder = gui.addFolder("Left Spotlight");
+// leftSpotlightFolder
+//   .addColor(spotlightParams, "leftSpotlightColor")
+//   .onChange(() => {
+//     leftSpotlight.color.set(spotlightParams.leftSpotlightColor);
+//   });
+// leftSpotlightFolder
+//   .add(spotlightParams, "leftSpotlightIntensity", 0, 50)
+//   .onChange(() => {
+//     leftSpotlight.intensity = spotlightParams.leftSpotlightIntensity;
+//   });
+// leftSpotlightFolder
+//   .add(spotlightParams, "leftSpotlightAngle", 0, Math.PI)
+//   .onChange(() => {
+//     leftSpotlight.angle = spotlightParams.leftSpotlightAngle;
+//   });
+// leftSpotlightFolder
+//   .add(spotlightParams, "leftSpotlightPenumbra", 0, 2)
+//   .onChange(() => {
+//     leftSpotlight.penumbra = spotlightParams.leftSpotlightPenumbra;
+//   });
+// leftSpotlightFolder
+//   .add(spotlightParams, "leftSpotlightDistance", 1, 50)
+//   .onChange(() => {
+//     leftSpotlight.distance = spotlightParams.leftSpotlightDistance;
+//   });
 
-const rearSpotlightFolder = gui.addFolder("Rear Spotlight");
-rearSpotlightFolder
-  .addColor(spotlightParams, "rearSpotlightColor")
-  .onChange(() => {
-    rearSpotlight.color.set(spotlightParams.rearSpotlightColor);
-  });
-rearSpotlightFolder
-  .add(spotlightParams, "rearSpotlightIntensity", 0, 50)
-  .onChange(() => {
-    rearSpotlight.intensity = spotlightParams.rearSpotlightIntensity;
-  });
-rearSpotlightFolder
-  .add(spotlightParams, "rearSpotlightAngle", 0, Math.PI)
-  .onChange(() => {
-    rearSpotlight.angle = spotlightParams.rearSpotlightAngle;
-  });
-rearSpotlightFolder
-  .add(spotlightParams, "rearSpotlightPenumbra", 0, 2)
-  .onChange(() => {
-    rearSpotlight.penumbra = spotlightParams.rearSpotlightPenumbra;
-  });
-rearSpotlightFolder
-  .add(spotlightParams, "rearSpotlightDistance", 1, 50)
-  .onChange(() => {
-    rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
-  });
+// const rearSpotlightFolder = gui.addFolder("Rear Spotlight");
+// rearSpotlightFolder
+//   .addColor(spotlightParams, "rearSpotlightColor")
+//   .onChange(() => {
+//     rearSpotlight.color.set(spotlightParams.rearSpotlightColor);
+//   });
+// rearSpotlightFolder
+//   .add(spotlightParams, "rearSpotlightIntensity", 0, 50)
+//   .onChange(() => {
+//     rearSpotlight.intensity = spotlightParams.rearSpotlightIntensity;
+//   });
+// rearSpotlightFolder
+//   .add(spotlightParams, "rearSpotlightAngle", 0, Math.PI)
+//   .onChange(() => {
+//     rearSpotlight.angle = spotlightParams.rearSpotlightAngle;
+//   });
+// rearSpotlightFolder
+//   .add(spotlightParams, "rearSpotlightPenumbra", 0, 2)
+//   .onChange(() => {
+//     rearSpotlight.penumbra = spotlightParams.rearSpotlightPenumbra;
+//   });
+// rearSpotlightFolder
+//   .add(spotlightParams, "rearSpotlightDistance", 1, 50)
+//   .onChange(() => {
+//     rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
+//   });
 
 ///// Apply lighting settings
 rightSpotlight.color.set(spotlightParams.rightSpotlight);
@@ -321,8 +321,8 @@ rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 const distance = 20; // Distance to model.
 
 function showOnCanvas() {
-  controls.update();
-  updateDirectionalLight();
+  // controls.update();
+  // updateDirectionalLight();
 
   angle += 0.0015;
   const x = center.x + distance * Math.cos(angle);

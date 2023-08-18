@@ -1,8 +1,9 @@
 import gsap from "gsap";
 
-gsap.from("#stripes", 0.75, {
+gsap.from("#stripes", 0.5, {
     opacity: 0,
-    delay: 3,
+    delay: 1.5,
+    x: 800,
     y: -800,
     ease: "expo.inOut",
   });

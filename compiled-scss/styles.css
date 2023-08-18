@@ -76,7 +76,7 @@ select {
 .canvas-container {
   position: fixed;
   top: 50%;
-  left: 4.5vw;
+  left: 5vw;
   transform: translateY(-50%);
   width: 35%;
   height: 70%;
@@ -114,10 +114,11 @@ select {
 
 #stripes {
   position: fixed;
-  width: 200px;
+  width: 400px;
   height: 100vh;
-  left: 16.75%;
-  background: linear-gradient(to right, #6B4E38 75%, #B08E60 25%);
+  left: 13.75%;
+  background: linear-gradient(to right, #6B4E38 90%, #B08E60 10%);
+  transform: skewX(-45deg);
   z-index: 0;
 }
 
