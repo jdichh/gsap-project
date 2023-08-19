@@ -5,15 +5,21 @@
   overflow-y: hidden;
 }
 
+#watch-info {
+  & > * {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 #product {
-  display: flex;
-  justify-content: space-between;
+
   align-items: center; 
   height: 100vh;
   
   .main-content {
     margin-inline: 1rem;
-    float: right;
+    
     top: 3rem;
     width: 100%;
     max-width: 875px;

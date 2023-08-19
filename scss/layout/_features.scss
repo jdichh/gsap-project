@@ -1,0 +1,24 @@
+@use "../global/typography";
+@use "../global/colors";
+
+#features {
+    height: 100vh;
+    margin-top: 5rem;
+    
+    .features__content {
+      margin-inline: 1rem;
+      float: right;
+      top: 3rem;
+      width: 100%;
+      max-width: 875px;
+      position: relative;
+      padding: 1rem;
+  
+      .features__text {
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+  
+    }
+  }
+  
