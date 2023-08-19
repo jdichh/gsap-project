@@ -1,21 +1,41 @@
 @use "../global/typography";
 @use "../global/colors";
 
+#watch-info {
+  & > * {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 #features {
-  height: 100vh;
-  outline: 1px solid red;
-  .features__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .feature-section {
+    outline: 1px solid red;
+    height: 100vh;
     display: flex;
     align-items: center;
-    margin-inline: 1rem;
-    width: 100%;
-    max-width: 875px;
-    position: relative;
-    padding: 1rem;
 
-    .features__text {
-      font-size: 1.2rem;
-      line-height: 1.7;
+    .features-content {
+      margin-inline: 1rem;
+      width: 100%;
+      max-width: 875px;
+      position: relative;
+      padding: 1rem;
+
+      .features-content__title {
+        font-family: "Old Standard TT", serif;
+        font-size: 2.5rem;
+        text-align: right;
+      }
+
+      .features-content__text {
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
     }
   }
 }

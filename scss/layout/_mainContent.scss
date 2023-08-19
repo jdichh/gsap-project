@@ -13,13 +13,11 @@
 }
 
 #product {
-  outline: 1px solid red;
-  align-items: center; 
+  align-items: center;
   height: 100vh;
-  
+
   .main-content {
     margin-inline: 1rem;
-    
     top: 3rem;
     width: 100%;
     max-width: 875px;
@@ -32,7 +30,7 @@
       text-align: right;
     }
 
-    .main-content__text__one {
+    .main-content__text {
       font-size: 1.2rem;
       line-height: 1.7;
     }
