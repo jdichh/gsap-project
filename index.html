@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Experience the art of time and fine craftsmanship of the BESEDIN & CO. Vintora wristwatch."
+      content="Experience the art of time and fine craftsmanship of the KHRONOMECHANICA Vintora wristwatch."
     />
     <link rel="stylesheet" href="compiled-scss/styles.css" />
     <link
@@ -15,7 +15,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>BESEDIN & CO. Vintora</title>
+    <link rel="shortcut icon" href="./public/loading.svg" type="image/x-icon" />
+    <title>KHRONOMECHANICA Vintora</title>
   </head>
   <body>
     <div id="warning"></div>
@@ -27,8 +28,19 @@
     <div class="container">
       <nav>
         <header class="logo">
-          <h1>BESEDIN & CO.</h1>
+          <h1>
+            <img
+              src="./loading.svg"
+              alt="Company logo."
+              class="logo__h1"
+            />KHRONOMECHANICA
+          </h1>
         </header>
+        <ul class="nav__links">
+          <li><a href="#">COLLECTION</a></li>
+          <li><a href="#">OFFERS</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
       </nav>
 
       <div id="loading-container">
@@ -38,65 +50,33 @@
           id="loading-spinner"
         />
       </div>
-      <div class="canvas-container">
-        <canvas class="webGL"></canvas>
+
+      <div id="watch-info">
+        <div class="canvas-container">
+          <canvas class="webGL"></canvas>
+        </div>
+
+        <div class="main-content">
+          <h1 class="main-content__title">The KHRONOMECHANICA Vintora.</h1>
+          <p class="main-content__text__one">
+            The <strong>KHRONOMECHANICA</strong> company intertwines
+            cutting-edge craftsmanship and the rich histories of old. Our
+            steampunk-inspired timepieces are a fusion of age-old aesthetics and
+            contemporary innovation. Our meticulously crafted timepieces pay
+            homage to the intricate mechanisms and designs of the Victorian era,
+            all while embracing the technological advancements of today. From
+            the intricate gears that turn with each tick, to the rich patina of
+            aged metals, our watches are more than instruments of timekeeping.
+            They are wearable works of art that spark conversations and inspire
+            curiosity. And the <strong>Vintora</strong> is yet another one of
+            our many masterpieces.
+          </p>
+          <a href="#" class="main-content__order__button">Order</a>
+        </div>
+      
       </div>
 
-      <div class="main-content">
-        <h1 class="main-content__title">The BESEDIN & CO. Vintora</h1>
-        <p class="main-content__text__one">
-          The <strong>BESEDIN & CO.</strong> company intertwines cutting-edge
-          craftsmanship and the rich histories of old. Our steampunk-inspired
-          timepieces are a fusion of age-old aesthetics and contemporary
-          innovation. Our meticulously crafted timepieces pay homage to the
-          intricate mechanisms and designs of the Victorian era, all while
-          embracing the technological advancements of today. From the intricate
-          gears that turn with each tick, to the rich patina of aged metals, our
-          watches are more than instruments of timekeeping. They are wearable
-          works of art that spark conversations and inspire curiosity. And the
-          <strong>Vintora</strong> is yet another one of our many masterpieces.
-        </p>
-        <a href="" class="main-content__order__button">Order</a>
-      </div>
-
-      <div class="media">
-        <ul>
-          <li>
-            <a
-              aria-label="Button to Linkedin profile"
-              href="https://www.linkedin.com/in/jason-dichoso-a97a0026a/"
-              target="_blank"
-              class="fa-brands fa-linkedin-in"
-            ></a>
-          </li>
-          <li>
-            <a
-              aria-label="Button to Facebook profile"
-              href="https://www.youtube.com/watch?v=R44L-EovL88"
-              target="_blank"
-              class="fa-brands fa-facebook"
-            ></a>
-          </li>
-          <li>
-            <a
-              aria-label="Button to Instagram profile"
-              href="https://www.youtube.com/watch?v=R44L-EovL88"
-              target="_blank"
-              class="fa-brands fa-instagram"
-            ></a>
-          </li>
-          <li>
-            <a
-              aria-label="Button to my TikTok profile"
-              href="https://www.youtube.com/watch?v=R44L-EovL88"
-              target="_blank"
-              class="fa-brands fa-tiktok"
-            ></a>
-          </li>
-        </ul>
-      </div>
     </div>
-
     <script type="module" src="gsap.js" defer></script>
     <script type="module" src="index.js" defer></script>
   </body>

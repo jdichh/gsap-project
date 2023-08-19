@@ -1,11 +1,18 @@
 @use "../global/typography";
 @use "../global/colors";
 
+#watch-info {
+  display: flex;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 .main-content {
   position: fixed;
   top: 50vh;
-  right: 10vw;
   transform: translateY(-50%);
+  margin-left: 55rem;
   width: 100%;
   max-width: 800px;
   overflow: hidden;
@@ -18,7 +25,7 @@
 
   .main-content__text__one {
     font-size: 1.2rem;
-    line-height: 1.8;
+    line-height: 1.7;
   }
 
   .main-content__order__button {
@@ -32,8 +39,7 @@
     background-color: colors.$vintage-black;
     color: colors.$parchment;
 
-    &:hover,
-    &:focus {
+    &:hover{
       background-color: colors.$brass;
       color: colors.$vintage-black;
     }

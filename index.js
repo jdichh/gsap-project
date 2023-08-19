@@ -85,7 +85,7 @@ Promise.all([
       {
         opacity: 1,
         y: 0,
-        delay: 0.3,
+        delay: 0.15,
         ease: "expo.inOut",
         duration: 0.5,
       }
@@ -100,7 +100,7 @@ Promise.all([
       {
         opacity: 1,
         y: 0,
-        delay: 0.2,
+        delay: 0.125,
         ease: "expo.inOut",
         duration: 0.5,
       }
@@ -394,7 +394,7 @@ controls.enableDamping = true;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 1;
 controls.enablePan = false;
-controls.maxDistance = 30;
+controls.maxDistance = 25;
 controls.minDistance = 19;
 camera.position.z = 20;
 

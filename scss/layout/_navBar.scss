@@ -1,19 +1,52 @@
-@use '../global/typography';
+@use "../global/typography";
+@use "../global/colors";
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-family: 'Old Standard TT', serif;
-    width: 100%;
-    max-width: 1600px; 
-    margin: 0 auto;
-    padding: 1rem 3rem;
-    
-    .logo {
-      position: sticky;
-      top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Old Standard TT", serif;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
 
+  .logo {
+    .logo__h1 {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      animation: spin 3s linear infinite;
     }
-    
   }
+}
+
+.nav__links {
+  list-style: none;
+
+  li {
+    margin-right: 3rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+    padding: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    a {
+      // font-family: 'League Spartan', sans-serif;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
