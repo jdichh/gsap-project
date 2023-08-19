@@ -21,13 +21,18 @@
   <body>
     <div id="warning"></div>
 
-    <div id="stripes">
-      <div class="stripe__one"></div>
-      <div class="stripe__two"></div>
-      <div class="stripe__three"></div>
+    <div id="loading-container">
+      <img src="./loading.svg" alt="A loading spinner." id="loading-spinner" />
     </div>
 
     <div class="container">
+
+      <div id="stripes">
+        <div class="stripe__one"></div>
+        <div class="stripe__two"></div>
+        <div class="stripe__three"></div>
+      </div>
+      
       <nav>
         <header class="logo">
           <h1>
@@ -44,14 +49,6 @@
           <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
-
-      <div id="loading-container">
-        <img
-          src="./loading.svg"
-          alt="A loading spinner."
-          id="loading-spinner"
-        />
-      </div>
 
       <div class="canvas-container">
         <canvas class="webGL"></canvas>
@@ -111,7 +108,7 @@
         </section>
       </section>
     </div>
-    <!-- <script src="./javascript/scroll.js"></script> -->
+    <script src="./javascript/scroll.js"></script>
     <script type="module" src="./javascript/gsap.js" defer></script>
     <script type="module" src="./javascript/index.js" defer></script>
   </body>

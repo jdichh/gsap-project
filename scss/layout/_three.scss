@@ -2,13 +2,14 @@
 
 .canvas-container {
   position: absolute;
-  top: 10rem; 
-  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 2rem;
   height: 700px;
   width: 100%;
   max-width: 825px;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .canvas {
