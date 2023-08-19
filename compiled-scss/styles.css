@@ -313,15 +313,22 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
   font-family: "League Spartan", sans-serif;
   background-color: #f0e9d8;
   color: #222222;
 }
 
 .container {
-  min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
+  max-width: 1800px;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.loading {
+  overflow-y: hidden;
 }
 
 #stripes {
@@ -354,12 +361,12 @@ body {
 }
 
 .canvas-container {
-  position: fixed;
-  top: 50vh;
+  position: relative;
+  top: 25rem;
+  height: 750px;
   transform: translateY(-50%);
-  width: 100%;
-  max-width: 825px;
-  height: 80vh;
+  width: calc(100% - 5px);
+  max-width: 850px;
   overflow: hidden;
   z-index: 3;
 }
@@ -385,6 +392,7 @@ body {
   color: #f0e9d8;
   font-size: 24px;
   text-align: center;
+  z-index: 999;
 }
 
 .webgl-warning-visible p {
@@ -393,6 +401,9 @@ body {
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -463,19 +474,16 @@ nav .logo .logo__h1 {
 }
 #watch-info {
   display: flex;
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .main-content {
-  position: fixed;
-  top: 50vh;
+  position: relative;
+  top: 35rem;
   transform: translateY(-50%);
-  margin-left: 55rem;
   width: 100%;
   max-width: 800px;
-  overflow: hidden;
 }
 .main-content .main-content__title {
   font-family: "Old Standard TT", serif;
@@ -484,7 +492,7 @@ nav .logo .logo__h1 {
 }
 .main-content .main-content__text__one {
   font-size: 1.2rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 .main-content .main-content__order__button {
   text-decoration: none;
@@ -496,7 +504,7 @@ nav .logo .logo__h1 {
   background-color: #222222;
   color: #f0e9d8;
 }
-.main-content .main-content__order__button:hover {
+.main-content .main-content__order__button:hover, .main-content .main-content__order__button:focus {
   background-color: #b87333;
-  color: #222222;
+  color: #f0e9d8;
 }/*# sourceMappingURL=styles.css.map */

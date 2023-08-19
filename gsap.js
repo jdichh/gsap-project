@@ -39,19 +39,6 @@ gsap.fromTo(".main-content",{
 }
 );
 
-gsap.fromTo(".media__links",{
-  opacity: 0,
-  x: 200,
-},
-{
-  opacity: 1,
-  x: 0,
-  delay: 5,
-  ease: "expo.inOut",
-  duration: 1,
-}
-);
-
 gsap.fromTo(".main-content__order__button",{
   opacity: 0,
   x: 800,

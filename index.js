@@ -13,8 +13,8 @@ if (!WebGL.isWebGLAvailable()) {
 }
 
 let watch;
-let angle = 0;
-const center = new THREE.Vector3();
+const body = document.querySelector("body")
+body.classList.add("loading");
 const container = document.querySelector(".canvas-container");
 const canvas = document.querySelector(".webGL");
 const loader = new GLTFLoader();
@@ -74,6 +74,7 @@ Promise.all([
 
     loadingSpinner.style.display = "none";
     container.style.display = "block";
+
     
     const timeLine = gsap.timeline();
     timeLine.fromTo(
@@ -120,6 +121,7 @@ Promise.all([
         duration: 0.5,
         onComplete: () => {
           document.getElementById('stripes').style.display = 'block';
+          body.classList.remove("loading");
         }
       }
     );
@@ -129,6 +131,7 @@ Promise.all([
   })
   .catch((error) => {
     console.error("Error loading model:", error);
+    body.classList.remove("loading");
   });
 
 ///// Instantiate lights
@@ -394,8 +397,8 @@ controls.enableDamping = true;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 1;
 controls.enablePan = false;
-controls.maxDistance = 25;
-controls.minDistance = 19;
+controls.maxDistance = 20;
+controls.minDistance = 20;
 camera.position.z = 20;
 
 function showOnCanvas() {

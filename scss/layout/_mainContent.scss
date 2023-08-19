@@ -3,19 +3,17 @@
 
 #watch-info {
   display: flex;
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .main-content {
-  position: fixed;
-  top: 50vh;
+  position: relative;
+  top: 35rem; 
   transform: translateY(-50%);
-  margin-left: 55rem;
   width: 100%;
   max-width: 800px;
-  overflow: hidden;
+  
 
   .main-content__title {
     font-family: "Old Standard TT", serif;
@@ -25,7 +23,7 @@
 
   .main-content__text__one {
     font-size: 1.2rem;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .main-content__order__button {
@@ -39,9 +37,10 @@
     background-color: colors.$vintage-black;
     color: colors.$parchment;
 
-    &:hover{
+    &:hover,
+    &:focus {
       background-color: colors.$brass;
-      color: colors.$vintage-black;
+      color: colors.$parchment;
     }
   }
 }
