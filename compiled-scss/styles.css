@@ -314,11 +314,14 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  min-height: 100vh;
-  min-width: 100vw;
   font-family: "League Spartan", sans-serif;
   background-color: #f0e9d8;
   color: #222222;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 #stripes {
@@ -328,6 +331,7 @@ body {
   position: fixed;
   width: 60px;
   height: 100vh;
+  opacity: 0;
   left: 0;
   background-color: #A54030;
 }
@@ -335,6 +339,7 @@ body {
   position: fixed;
   width: 60px;
   left: 3vw;
+  opacity: 0;
   height: 100vh;
   background-color: #b87333;
 }
@@ -342,8 +347,9 @@ body {
   position: fixed;
   width: 60px;
   left: 6vw;
+  opacity: 0;
   height: 100vh;
-  background-color: #008080;
+  background-color: #c5a94b;
 }
 
 .canvas-container {
@@ -353,7 +359,7 @@ body {
   transform: translateY(-50%);
   width: 100%;
   max-width: 800px;
-  height: 75vh;
+  height: 85vh;
   overflow: hidden;
   z-index: 3;
 }
@@ -458,6 +464,6 @@ nav .logo {
   color: #f0e9d8;
 }
 .main-content .main-content__order__button:hover, .main-content .main-content__order__button:focus {
-  background-color: #008080;
-  color: #f0e9d8;
+  background-color: #b87333;
+  color: #222222;
 }/*# sourceMappingURL=styles.css.map */

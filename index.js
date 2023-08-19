@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from "./node_modules/three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { gsap } from "gsap";
 import { GUI } from "dat.gui";
 import WebGL from "three/addons/capabilities/WebGL.js";
 
@@ -34,30 +35,30 @@ renderer.shadowMap.autoUpdate = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.5;
+renderer.toneMappingExposure = 1.8;
 
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 container.appendChild(renderer.domElement);
 
 ///// Load watch model
-const loadingSpinner = document.getElementById('loading-spinner');
+const loadingSpinner = document.getElementById("loading-spinner");
 Promise.all([
-  new Promise((resolve) => loader.load("/steampunk_watch.glb", resolve)),
+  new Promise((resolve) => loader.load("/steampunk_watch_4k.glb", resolve)),
 ])
   .then(([gltf1]) => {
     watch = gltf1.scene;
 
-    watch.position.y = 0.05;
+    watch.position.y = 0;
     watch.position.z = 0.9; // Increase to move to the left, and decrease to move to the right.
 
     watch.rotation.x = 1.5;
     // Positive for counter-clockwise, negative for counter-clockwise.
-    watch.rotation.y = 1.57; 
+    watch.rotation.y = 1.57;
     // watch.rotation.y = -0.8
-    
+
     // Positive for downwards, negative for upwards.
-    watch.rotation.z = 0.1; 
+    watch.rotation.z = 0.1;
 
     watch.scale.set(1.2, 1.2, 1.2);
 
@@ -73,7 +74,56 @@ Promise.all([
 
     loadingSpinner.style.display = "none";
     container.style.display = "block";
+    
+    const timeLine = gsap.timeline();
+    timeLine.fromTo(
+      ".stripe__one",
+      {
+        opacity: 0,
+        y: -800,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.3,
+        ease: "expo.inOut",
+        duration: 0.5,
+      }
+    );
 
+    timeLine.fromTo(
+      ".stripe__two",
+      {
+        opacity: 0,
+        y: 800,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.2,
+        ease: "expo.inOut",
+        duration: 0.5,
+      }
+    );
+
+    timeLine.fromTo(
+      ".stripe__three",
+      {
+        opacity: 0,
+        y: -800,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.1,
+        ease: "expo.inOut",
+        duration: 0.5,
+        onComplete: () => {
+          document.getElementById('stripes').style.display = 'block';
+        }
+      }
+    );
+    
     scaleModel();
     showOnCanvas();
   })
@@ -112,7 +162,7 @@ const rearSpotlight = new THREE.SpotLight(
 ///// Light configurations
 directionalLight.position.set(12, 25, 50);
 directionalLight.castShadow = true;
-directionalLight.shadow.bias = -0.001; // Fixes shadow artifacts.
+directionalLight.shadow.bias = -0.002; // Fixes shadow artifacts.
 directionalLight.shadow.mapSize.width = 1024;
 directionalLight.shadow.mapSize.height = 1024;
 directionalLight.shadow.camera.left = -10;
@@ -124,7 +174,7 @@ directionalLight.shadow.camera.far = 500;
 
 rightSpotlight.position.set(-5, 0, 0);
 rightSpotlight.castShadow = true;
-rightSpotlight.shadow.bias = -0.001; // Fixes shadow artifacts.
+rightSpotlight.shadow.bias = -0.002; // Fixes shadow artifacts.
 rightSpotlight.shadow.camera.near = 0.1;
 rightSpotlight.shadow.camera.far = 25;
 rightSpotlight.shadow.mapSize.width = 1024;
@@ -140,7 +190,7 @@ leftSpotlight.shadow.mapSize.height = 1024;
 
 rearSpotlight.position.set(0, 0, -5);
 rearSpotlight.castShadow = true;
-rearSpotlight.shadow.bias = -0.001; // Fixes shadow artifacts.
+rearSpotlight.shadow.bias = -0.002; // Fixes shadow artifacts.
 rearSpotlight.shadow.mapSize.width = 1024;
 rearSpotlight.shadow.mapSize.height = 1024;
 rearSpotlight.shadow.camera.near = 0.5;
@@ -182,7 +232,6 @@ window.addEventListener("resize", () => {
   scaleModel();
 });
 
-
 const WHITE = "#FFFFFF";
 const BRASS = "#B8A373";
 
@@ -207,10 +256,6 @@ const spotlightParams = {
 };
 
 ///// DevTools Area
-// const controls = new OrbitControls(camera, container);
-// controls.enableDamping = true;
-// camera.position.z = 5;
-
 // const lightParameters = {
 //   lightIntensity: DIRECTIONAL_LIGHT_INTENSITY,
 //   lightX: directionalLight.position.x,
@@ -343,17 +388,19 @@ rearSpotlight.angle = spotlightParams.rearSpotlightAngle;
 rearSpotlight.penumbra = spotlightParams.rearSpotlightPenumbra;
 rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 
-const distance = 20; // Distance to model.
+///// Main Stuff
+const controls = new OrbitControls(camera, container);
+controls.enableDamping = true;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 1;
+controls.enablePan = false;
+controls.maxDistance = 30;
+controls.minDistance = 19;
+camera.position.z = 20;
 
 function showOnCanvas() {
-  // controls.update();
+  controls.update();
   // updateDirectionalLight();
-
-  angle += 0.002;
-  const x = center.x + distance * Math.cos(angle);
-  const z = center.z + distance * Math.sin(angle);
-  camera.position.set(x, center.y, z);
-  camera.lookAt(center);
 
   renderer.render(scene, camera);
   requestAnimationFrame(showOnCanvas);

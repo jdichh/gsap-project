@@ -6,9 +6,12 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  min-height: 100vh;
-  min-width: 100vw;
   font-family: 'League Spartan', sans-serif;
   background-color: colors.$parchment;
   color: colors.$vintage-black;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
 }
