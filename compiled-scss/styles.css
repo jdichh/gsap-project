@@ -360,7 +360,7 @@ body {
 
 .canvas-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   margin-left: 2rem;
   height: 700px;
@@ -408,8 +408,7 @@ nav {
   font-family: "Old Standard TT", serif;
   background-color: #f0e9d8;
   border-bottom: 1px solid #222222;
-  width: 100%;
-  max-width: 1800px;
+  width: 100vw;
   margin: 0 auto;
   padding-block: 0.25rem;
   transition: 0.2s;
@@ -488,28 +487,36 @@ nav .logo .logo__h1 {
   justify-content: flex-end;
 }
 
-#product {
-  align-items: center;
-  height: 100vh;
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-#product .main-content {
+#main .main-section {
+  outline: 1px solid red;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#main .main-section .main-content {
   margin-inline: 1rem;
-  top: 3rem;
   width: 100%;
   max-width: 875px;
   position: relative;
   padding: 1rem;
 }
-#product .main-content .main-content__title {
+#main .main-section .main-content .main-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
+  outline: 1px solid red;
 }
-#product .main-content .main-content__text {
+#main .main-section .main-content .main-content__text {
   font-size: 1.2rem;
   line-height: 1.7;
+  outline: 1px solid red;
 }
-#product .main-content .main-content__order__button {
+#main .main-section .main-content .main-content__order__button {
   text-decoration: none;
   transition: 0.1s;
   float: right;
@@ -519,7 +526,7 @@ nav .logo .logo__h1 {
   background-color: #222222;
   color: #f0e9d8;
 }
-#product .main-content .main-content__order__button:hover, #product .main-content .main-content__order__button:focus {
+#main .main-section .main-content .main-content__order__button:hover, #main .main-section .main-content .main-content__order__button:focus {
   background-color: #b87333;
   color: #f0e9d8;
 }
@@ -551,8 +558,11 @@ nav .logo .logo__h1 {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
+  outline: 1px solid red;
 }
 #features .feature-section .features-content .features-content__text {
+  text-align: right;
   font-size: 1.2rem;
   line-height: 1.7;
+  outline: 1px solid red;
 }/*# sourceMappingURL=styles.css.map */

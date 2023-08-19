@@ -10,8 +10,9 @@ nav {
   font-family: "Old Standard TT", serif;
   background-color: colors.$parchment;
   border-bottom: 1px solid colors.$vintage-black;
-  width: 100%;
-  max-width: 1800px;
+  width: 100vw;
+  // width: 100%;
+  // max-width: 1800px;
   margin: 0 auto;
   padding-block: 0.25rem;
   transition: 0.2s;
