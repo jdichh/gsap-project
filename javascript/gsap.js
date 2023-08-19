@@ -1,5 +1,8 @@
 import gsap from "gsap";
 
+const body = document.body
+body.classList.add("loading");
+
 gsap.fromTo(".canvas-container",{
   opacity: 0,
   x: -800,
@@ -49,5 +52,8 @@ gsap.fromTo(".main-content__order__button",{
   delay: 5.25,
   ease: "expo.inOut",
   duration: 1,
+  onComplete: () => {
+    body.classList.remove("loading");
+  }
 }
 );

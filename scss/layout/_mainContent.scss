@@ -1,46 +1,52 @@
 @use "../global/typography";
 @use "../global/colors";
 
-#watch-info {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
+.loading {
+  overflow-y: hidden;
 }
 
-.main-content {
-  position: relative;
-  top: 35rem; 
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 800px;
+#product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  height: 100vh;
   
-
-  .main-content__title {
-    font-family: "Old Standard TT", serif;
-    font-size: 2.5rem;
-    text-align: right;
-  }
-
-  .main-content__text__one {
-    font-size: 1.2rem;
-    line-height: 1.8;
-  }
-
-  .main-content__order__button {
-    text-decoration: none;
-    transition: 0.1s;
+  .main-content {
+    margin-inline: 1rem;
     float: right;
-    padding: 0.7rem 1.4rem;
-    border-radius: 2px;
-    font-size: 1.2rem;
+    top: 3rem;
+    width: 100%;
+    max-width: 875px;
+    position: relative;
+    padding: 1rem;
 
-    background-color: colors.$vintage-black;
-    color: colors.$parchment;
+    .main-content__title {
+      font-family: "Old Standard TT", serif;
+      font-size: 2.5rem;
+      text-align: right;
+    }
 
-    &:hover,
-    &:focus {
-      background-color: colors.$brass;
+    .main-content__text__one {
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .main-content__order__button {
+      text-decoration: none;
+      transition: 0.1s;
+      float: right;
+      padding: 0.7rem 1.4rem;
+      border-radius: 2px;
+      font-size: 1.2rem;
+
+      background-color: colors.$vintage-black;
       color: colors.$parchment;
+
+      &:hover,
+      &:focus {
+        background-color: colors.$brass;
+        color: colors.$parchment;
+      }
     }
   }
 }

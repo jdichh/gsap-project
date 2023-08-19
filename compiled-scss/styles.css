@@ -313,7 +313,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
   font-family: "League Spartan", sans-serif;
   background-color: #f0e9d8;
@@ -323,12 +323,12 @@ body {
 .container {
   width: 100%;
   max-width: 1800px;
-  max-height: 100vh;
   margin: 0 auto;
+  outline: 2px dotted red;
 }
 
 .loading {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #stripes {
@@ -362,11 +362,11 @@ body {
 
 .canvas-container {
   position: relative;
-  top: 25rem;
-  height: 750px;
-  transform: translateY(-50%);
-  width: calc(100% - 5px);
-  max-width: 850px;
+  top: 3rem;
+  left: 2rem;
+  height: 700px;
+  width: 100%;
+  max-width: 825px;
   overflow: hidden;
   z-index: 3;
 }
@@ -401,17 +401,22 @@ body {
 }
 
 nav {
-  position: sticky;
-  top: 0;
+  position: fixed;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Old Standard TT", serif;
+  background-color: #f0e9d8;
+  border-bottom: 1px solid #222222;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding-block: 0.5rem;
+  transition: 0.2s;
+}
+nav .logo {
+  padding-left: 2rem;
 }
 nav .logo .logo__h1 {
   width: 20px;
@@ -424,11 +429,10 @@ nav .logo .logo__h1 {
   list-style: none;
 }
 .nav__links li {
-  margin-right: 3rem;
   cursor: pointer;
   display: inline-block;
-  transition: 0.1s;
-  padding: 0.5rem;
+  transition: 0.2s;
+  padding-inline: 2rem;
 }
 .nav__links li:hover {
   transform: scale(1.2);
@@ -436,6 +440,9 @@ nav .logo .logo__h1 {
 .nav__links li a {
   text-decoration: none;
   color: inherit;
+}
+.nav__links li a.scrolled {
+  background-color: #f0e9d8;
 }
 
 @keyframes spin {
@@ -472,29 +479,35 @@ nav .logo .logo__h1 {
     transform: rotate(360deg);
   }
 }
-#watch-info {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
+.loading {
+  overflow-y: hidden;
 }
 
-.main-content {
-  position: relative;
-  top: 35rem;
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 800px;
+#product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }
-.main-content .main-content__title {
+#product .main-content {
+  margin-inline: 1rem;
+  float: right;
+  top: 3rem;
+  width: 100%;
+  max-width: 875px;
+  position: relative;
+  padding: 1rem;
+}
+#product .main-content .main-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
 }
-.main-content .main-content__text__one {
+#product .main-content .main-content__text__one {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.7;
 }
-.main-content .main-content__order__button {
+#product .main-content .main-content__order__button {
   text-decoration: none;
   transition: 0.1s;
   float: right;
@@ -504,7 +517,7 @@ nav .logo .logo__h1 {
   background-color: #222222;
   color: #f0e9d8;
 }
-.main-content .main-content__order__button:hover, .main-content .main-content__order__button:focus {
+#product .main-content .main-content__order__button:hover, #product .main-content .main-content__order__button:focus {
   background-color: #b87333;
   color: #f0e9d8;
 }/*# sourceMappingURL=styles.css.map */

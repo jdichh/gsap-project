@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import { GLTFLoader } from "./node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { gsap } from "gsap";
 import { GUI } from "dat.gui";
 import WebGL from "three/addons/capabilities/WebGL.js";
@@ -13,8 +13,6 @@ if (!WebGL.isWebGLAvailable()) {
 }
 
 let watch;
-const body = document.querySelector("body")
-body.classList.add("loading");
 const container = document.querySelector(".canvas-container");
 const canvas = document.querySelector(".webGL");
 const loader = new GLTFLoader();
@@ -43,6 +41,7 @@ container.appendChild(renderer.domElement);
 
 ///// Load watch model
 const loadingSpinner = document.getElementById("loading-spinner");
+
 Promise.all([
   new Promise((resolve) => loader.load("/steampunk_watch_4k.glb", resolve)),
 ])
@@ -75,7 +74,6 @@ Promise.all([
     loadingSpinner.style.display = "none";
     container.style.display = "block";
 
-    
     const timeLine = gsap.timeline();
     timeLine.fromTo(
       ".stripe__one",
@@ -120,18 +118,16 @@ Promise.all([
         ease: "expo.inOut",
         duration: 0.5,
         onComplete: () => {
-          document.getElementById('stripes').style.display = 'block';
-          body.classList.remove("loading");
-        }
+          document.getElementById("stripes").style.display = "block";
+        },
       }
     );
-    
+
     scaleModel();
     showOnCanvas();
   })
   .catch((error) => {
     console.error("Error loading model:", error);
-    body.classList.remove("loading");
   });
 
 ///// Instantiate lights

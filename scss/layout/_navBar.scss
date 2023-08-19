@@ -2,19 +2,22 @@
 @use "../global/colors";
 
 nav {
-  position: sticky;
-  top:0;
+  position: fixed;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Old Standard TT", serif;
+  background-color: colors.$parchment;
+  border-bottom: 1px solid colors.$vintage-black;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding-block: 0.5rem;
+  transition: 0.2s;
 
   .logo {
+    padding-left: 2rem;
     .logo__h1 {
       width: 20px;
       height: 20px;
@@ -28,19 +31,20 @@ nav {
   list-style: none;
 
   li {
-    margin-right: 3rem;
     cursor: pointer;
     display: inline-block;
-    transition: 0.1s;
-    padding: 0.5rem;
+    transition: 0.2s;
+    padding-inline: 2rem;
     &:hover {
       transform: scale(1.2);
     }
 
     a {
-      // font-family: 'League Spartan', sans-serif;
       text-decoration: none;
       color: inherit;
+      &.scrolled {
+        background-color: colors.$parchment;
+      }
     }
   }
 }

@@ -2,14 +2,13 @@
 
 .canvas-container {
   position: relative;
-  top: 25rem;
-  height: 750px;
-  transform: translateY(-50%);
-  width: calc(100% - 5px);
-  max-width: 850px;
+  top: 3rem; 
+  left: 2rem;
+  height: 700px;
+  width: 100%;
+  max-width: 825px;
   overflow: hidden;
   z-index: 3;
-  // outline: 2px solid colors.$rusted-red
 }
 
 .canvas {
