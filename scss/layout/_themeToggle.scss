@@ -1,0 +1,15 @@
+@use '../global/colors';
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.light {
+  background-color: colors.$parchment;
+  color: colors.$vintage-black;
+}
+
+.dark {
+  background-color: colors.$vintage-black;
+  color: colors.$parchment;
+}

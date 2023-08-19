@@ -18,7 +18,7 @@
   align-items: flex-end;
 
   .main-section {
-    outline: 1px solid red;
+    // outline: 1px solid red;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
     .main-content {
       margin-inline: 1rem;
       width: 100%;
-      max-width: 875px;
+      max-width: 850px;
       position: relative;
       padding: 1rem;
 
@@ -34,32 +34,52 @@
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
-        outline: 1px solid red;
+       // outline: 1px solid red;
       }
 
       .main-content__text {
+        text-align: right;
         font-size: 1.2rem;
         line-height: 1.7;
-        outline: 1px solid red;
+       // outline: 1px solid red;
       }
 
-      .main-content__order__button {
+      .order-button {
         text-decoration: none;
         transition: 0.1s;
         float: right;
         padding: 0.7rem 1.4rem;
         border-radius: 2px;
         font-size: 1.2rem;
-
         background-color: colors.$vintage-black;
         color: colors.$parchment;
 
-        &:hover,
-        &:focus {
-          background-color: colors.$brass;
+        &:hover{
+          background-color: colors.$teal;
           color: colors.$parchment;
         }
+      
+        &.light {
+          background-color: colors.$vintage-black;
+          color: colors.$parchment;
+      
+          &:hover{
+            background-color: colors.$teal;
+            color: colors.$parchment;
+          }
+        }
+      
+        &.dark {
+          background-color: colors.$brass;
+          color: colors.$vintage-black;
+      
+          &:hover{
+            background-color: colors.$teal;
+            color: colors.$vintage-black;
+          }
+        }
       }
+      
     }
   }
 }

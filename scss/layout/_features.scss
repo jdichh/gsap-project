@@ -14,7 +14,7 @@
   align-items: flex-end;
 
   .feature-section {
-    outline: 1px solid red;
+   // outline: 1px solid red;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -30,14 +30,14 @@
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
-        outline: 1px solid red;
+       // outline: 1px solid red;
       }
 
       .features-content__text {
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.7;
-        outline: 1px solid red;
+       // outline: 1px solid red;
       }
     }
   }

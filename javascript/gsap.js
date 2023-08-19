@@ -10,7 +10,7 @@ gsap.fromTo(".canvas-container",{
 {
   opacity: 1,
   x: 0,
-  delay: 4,
+  delay: 4.5,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -23,7 +23,7 @@ gsap.fromTo("nav",{
 {
   opacity: 1,
   y: 0,
-  delay: 4.5,
+  delay: 4.75,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -36,7 +36,7 @@ gsap.fromTo(".main-content",{
 {
   opacity: 1,
   x: 0,
-  delay: 4.75,
+  delay: 5,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -50,6 +50,22 @@ gsap.fromTo(".main-content__order__button",{
   opacity: 1,
   x: 0,
   delay: 5.25,
+  ease: "expo.inOut",
+  duration: 1,
+  onComplete: () => {
+    body.classList.remove("loading");
+  }
+}
+);
+
+gsap.fromTo("#features",{
+  opacity: 0,
+  x: 800,
+},
+{
+  opacity: 1,
+  x: 0,
+  delay: 5.5,
   ease: "expo.inOut",
   duration: 1,
   onComplete: () => {

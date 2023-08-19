@@ -30,8 +30,9 @@
         <h1>
           <img
             src="./loading.svg"
-            alt="Company logo."
+            alt="Company logo and theme toggler."
             class="logo__h1"
+            id="theme-toggle"
           />KHRONOMECHANICA
         </h1>
       </header>
@@ -72,13 +73,13 @@
                 <strong>Vintora</strong> is yet another one of our many
                 masterpieces.
               </p>
-              <a href="#" class="main-content__order__button">Order</a>
+              <a href="#" class="main-content__order__button order-button">Order</a>
             </div>
           </section>
         </section>
 
         <section id="features">
-          <section class="feature-section">
+          <section class="feature-section" id="feature1">
             <div class="features-content">
               <h1 class="features-content__title">Harnessing Steam.</h1>
               <p class="features-content__text">
@@ -88,6 +89,35 @@
                 The soft hiss of steam's release adds an auditory dimension to
                 the watch's operation, making it a true embodiment of steampunk
                 innovation.
+              </p>
+            </div>
+          </section>
+
+          <section class="feature-section">
+            <div class="features-content">
+              <h1 class="features-content__title">Tesla Coil Power Reserve.</h1>
+              <p class="features-content__text">
+                The concealed Tesla coil within the watch absorbs ambient
+                electrical energy from the surroundings, extending the power
+                reserve beyond traditional limits. This innovative feature not
+                only enhances the watch's functionality but also exudes an air
+                of scientific marvel, embodying the spirit of steampunk
+                ingenuity.
+              </p>
+            </div>
+          </section>
+
+          <section class="feature-section">
+            <div class="features-content">
+              <h1 class="features-content__title">
+                Multidimensional Time Display.
+              </h1>
+              <p class="features-content__text">
+                The multidimensional time display challenges conventional norms
+                by using rotating gears to convey the passage of time. When the
+                hour, minute, and second gears align, the exact time is revealed
+                through precision-cut openings in the watch's face, providing a
+                unique and captivating visual experience.
               </p>
             </div>
           </section>
@@ -118,10 +148,23 @@
               </p>
             </div>
           </section>
+
+          <section class="feature-section">
+            <div class="features-content">
+              <h1 class="features-content__title">Intricate Observatory.</h1>
+              <p class="features-content__text">
+                Encircling the dial, the miniature observatory is a testament to
+                the fascination with celestial bodies during the steampunk era.
+                A tiny orrery, meticulously crafted to scale, revolves in time
+                with the movement of the planets, offering wearers a captivating
+                glimpse into the cosmic dance.
+              </p>
+            </div>
+          </section>
         </section>
       </section>
     </div>
-    <script src="./javascript/scroll.js"></script>
+    <script src="./javascript/themeToggle.js"></script>
     <script type="module" src="./javascript/gsap.js" defer></script>
     <script type="module" src="./javascript/index.js" defer></script>
   </body>
