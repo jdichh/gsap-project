@@ -781,6 +781,7 @@ nav .logo .logo__h1 {
   align-items: flex-end;
 }
 #main .main-section {
+  outline: 1px solid green;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -791,17 +792,20 @@ nav .logo .logo__h1 {
   max-width: 850px;
   position: relative;
   padding: 1rem;
+  outline: 1px solid red;
 }
 @media (max-width: 479px) {
   #main .main-section .main-content {
-    top: 18vh;
-    padding: 0.5rem;
+    margin-top: 40rem;
+    margin-bottom: 20rem;
+    padding: 0;
   }
 }
 #main .main-section .main-content .main-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
+  outline: 1px solid red;
 }
 @media (max-width: 479px) {
   #main .main-section .main-content .main-content__title {
@@ -816,6 +820,7 @@ nav .logo .logo__h1 {
   text-align: right;
   font-size: 1.2rem;
   line-height: 1.6;
+  outline: 1px solid red;
 }
 @media (max-width: 479px) {
   #main .main-section .main-content .main-content__text {
@@ -831,15 +836,10 @@ nav .logo .logo__h1 {
   align-items: flex-end;
 }
 #features .feature-section {
+  outline: 1px solid blue;
   height: 100vh;
   display: flex;
   align-items: center;
-}
-@media (max-width: 479px) {
-  #features .feature-section {
-    height: 50vh;
-    margin-bottom: 7vh;
-  }
 }
 #features .feature-section .features-content {
   margin-inline: 1rem;
@@ -847,10 +847,11 @@ nav .logo .logo__h1 {
   max-width: 850px;
   position: relative;
   padding: 1rem;
+  outline: 1px solid blue;
 }
 @media (max-width: 479px) {
   #features .feature-section .features-content {
-    top: 27vh;
+    margin-top: 10rem;
     padding: 0;
   }
 }
@@ -858,6 +859,7 @@ nav .logo .logo__h1 {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
+  outline: 1px solid blue;
 }
 @media (max-width: 479px) {
   #features .feature-section .features-content .features-content__title {
@@ -869,6 +871,7 @@ nav .logo .logo__h1 {
   text-align: right;
   font-size: 1.2rem;
   line-height: 1.6;
+  outline: 1px solid blue;
 }
 @media (max-width: 479px) {
   #features .feature-section .features-content .features-content__text {
@@ -878,22 +881,6 @@ nav .logo .logo__h1 {
   }
 }
 
-.gear-rating {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-  margin-left: 10px;
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -918,6 +905,7 @@ body {
   align-items: flex-start;
 }
 #reviews .reviews-section {
+  outline: 1px solid violet;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -928,11 +916,37 @@ body {
   max-width: 850px;
   position: relative;
   padding: 1rem;
+  outline: 1px solid violet;
+}
+@media (max-width: 479px) {
+  #reviews .reviews-section .reviews-content {
+    margin-top: 10rem;
+    padding: 0;
+  }
+}
+#reviews .reviews-section .reviews-content .reviews-content__rating {
+  outline: 1px solid violet;
+  text-align: left;
+}
+@media (max-width: 479px) {
+  #reviews .reviews-section .reviews-content .reviews-content__rating {
+    text-align: center;
+  }
 }
 #reviews .reviews-section .reviews-content .reviews-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: left;
+  outline: 1px solid violet;
+}
+@media (max-width: 479px) {
+  #reviews .reviews-section .reviews-content .reviews-content__title {
+    text-align: center;
+    font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+  }
+}
+#reviews .reviews-section .reviews-content .reviews-content__text {
+  outline: 1px solid violet;
 }
 #reviews .reviews-section .reviews-content .reviews-content__text p {
   text-align: left;
@@ -940,26 +954,42 @@ body {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+@media (max-width: 479px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    text-align: left;
+    line-height: 1.2;
+    font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+  }
+}
 
+.gear-rating {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #features_q, #purchase_q,
 #reviews_q {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  z-index: 3;
 }
 #features_q .question-section, #purchase_q .question-section,
 #reviews_q .question-section {
+  outline: 1px solid yellow;
   height: 100vh;
   display: flex;
   align-items: center;
-}
-@media (max-width: 479px) {
-  #features_q .question-section, #purchase_q .question-section,
-  #reviews_q .question-section {
-    height: 50vh;
-    margin-bottom: 7vh;
-  }
 }
 #features_q .question-section .question-content, #purchase_q .question-section .question-content,
 #reviews_q .question-section .question-content {
@@ -972,7 +1002,6 @@ body {
 @media (max-width: 479px) {
   #features_q .question-section .question-content, #purchase_q .question-section .question-content,
   #reviews_q .question-section .question-content {
-    top: 27vh;
     padding: 0;
   }
 }
@@ -981,6 +1010,7 @@ body {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
+  outline: 1px solid yellow;
 }
 @media (max-width: 479px) {
   #features_q .question-section .question-content .question-content__title, #purchase_q .question-section .question-content .question-content__title,
@@ -999,6 +1029,7 @@ body {
   text-align: right;
   font-size: 1.2rem;
   line-height: 1.6;
+  outline: 1px solid yellow;
 }
 @media (max-width: 479px) {
   #features_q .question-section .question-content .question-content__text, #purchase_q .question-section .question-content .question-content__text,

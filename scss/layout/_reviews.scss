@@ -1,13 +1,14 @@
 @use "../global/typography";
 @use "../global/colors";
+@use "./mixins";
 
 #reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   .reviews-section {
-    // outline: 1px solid red;
+    outline: 1px solid violet;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -18,12 +19,32 @@
       max-width: 850px;
       position: relative;
       padding: 1rem;
+      outline: 1px solid violet;
+
+      @include mixins.xxs-max-479 {
+        margin-top: 10rem;
+        padding: 0;
+      }
+
+      .reviews-content__rating {
+        outline: 1px solid violet;
+        text-align: left;
+
+        @include mixins.xxs-max-479 {
+          text-align: center;
+        }
+      }
 
       .reviews-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: left;
-        // outline: 1px solid red;
+        outline: 1px solid violet;
+
+        @include mixins.xxs-max-479 {
+          text-align: center;
+          font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+        }
       }
 
       .reviews-content__text {
@@ -32,9 +53,32 @@
           font-size: 1.2rem;
           line-height: 1.6;
           margin-bottom: 20px;
+
+          @include mixins.xxs-max-479 {
+            text-align: left;
+            line-height: 1.2;
+            font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+          }
         }
-        // outline: 1px solid red;
+        outline: 1px solid violet;
       }
     }
+  }
+}
+
+.gear-rating {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

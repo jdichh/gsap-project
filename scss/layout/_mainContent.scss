@@ -12,7 +12,7 @@
   align-items: flex-end;
 
   .main-section {
-    // outline: 1px solid red;
+    outline: 1px solid green;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -23,18 +23,19 @@
       max-width: 850px;
       position: relative;
       padding: 1rem;
-      // outline: 1px solid red;
+      outline: 1px solid red;
       
       @include mixins.xxs-max-479 {
-        top: 18vh;
-        padding: 0.5rem;
+        margin-top: 40rem;
+        margin-bottom: 20rem;
+        padding: 0;
       }
 
       .main-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
-        // outline: 1px solid red;
+        outline: 1px solid red;
         @include mixins.xxs-max-479 {
           .the-the {
             display: none;
@@ -48,7 +49,7 @@
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.6;
-        // outline: 1px solid red;
+        outline: 1px solid red;
         @include mixins.xxs-max-479 {
           text-align: left;
           line-height: 1.3;
