@@ -3,9 +3,9 @@
 
 .canvas-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  margin-left: 9.5rem;
+  margin-left: 5rem;
   height: 65vh;
   width: 32vw;
   overflow: hidden;
@@ -13,43 +13,80 @@
   pointer-events: none;
   outline: 1px solid red;
 
-  @include mixins.uw-5120{
+  @include mixins.uw-5120 {
     margin-left: 0;
     height: 50vh;
     width: 18vw;
   }
 
-  @include mixins.uw-3840{
-    margin-left: 6rem;
+  @include mixins.uw-3840 {
+    margin-left: 5rem;
     height: 52.5vh;
     width: 20vw;
   }
 
-  @include mixins.uw-3440{
-    margin-left: 5rem;
+  @include mixins.uw-3440 {
     height: 55vh;
     width: 22vw;
   }
 
-  @include mixins.uw-2560{
+  @include mixins.uw-2560 {
     margin-left: 9rem;
     width: 57.5vh;
     width: 24vw;
   }
 
-  @include mixins.xxl-screen{
+  @include mixins.xxxl-1920 {
     width: 32vw;
   }
 
-  @include mixins.lg-screen{
-    width: 40vw;
+  @include mixins.xxl-1600 {
+    width: 33vw;
+  }
+
+  @include mixins.xl-1200 {
+    margin-left: 3rem;
+    width: 34vw;
+  }
+
+  @include mixins.lg-992 {
+    top: 44vh;
+    margin-left: 7rem;
+    width: 84vw;
+  }
+
+  @include mixins.md-768 {
+    top: 48vh;
+    margin-left: 3.5rem;
+    width: 90vw;
+  }
+
+  @include mixins.sm-510 {
+    top: 40vh;
+    margin-left: 2rem;
+    height: 75vw;
+    width: 89vw;
+  }
+
+  @include mixins.xs-480 {
+    margin-left: 2rem;
+    height: 75vw;
+    width: 86vw;
+    top: 35vh;
+  }
+
+  @include mixins.xxs-max-479 {
+    margin-left: 2rem;
+    height: 75vw;
+    width: 86vw;
+    top: 30vh;
   }
 }
 
-// .canvas {
-//   width: 100%;
-//   height: 100%; 
-// }
+.canvas {
+  width: 100%;
+  height: 100%;
+}
 
 .webgl-warning {
   display: none;

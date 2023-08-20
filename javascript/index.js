@@ -218,7 +218,7 @@ window.addEventListener("resize", () => {
 
   let scaleFactor = Math.min(width, height) / 900;
 
-  const minScale = 0.95;
+  const minScale = 1;
   const maxScale = 1.5; 
   scaleFactor = Math.max(minScale, Math.min(maxScale, scaleFactor));
 
@@ -384,7 +384,7 @@ rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 ///// Main Stuff
 const controls = new OrbitControls(camera, container);
 controls.enableDamping = true;
-controls.autoRotate = true;
+controls.autoRotate = false;
 controls.autoRotateSpeed = 1;
 controls.enablePan = false;
 controls.maxDistance = 20;

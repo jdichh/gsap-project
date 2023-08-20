@@ -1,5 +1,6 @@
 @use "../global/typography";
 @use "../global/colors";
+@use "../layout/mixins";
 
 nav {
   position: fixed;
@@ -11,11 +12,9 @@ nav {
   background-color: colors.$parchment;
   border-bottom: 1px solid colors.$vintage-black;
   width: 100vw;
-  // width: 100%;
-  // max-width: 1800px;
   margin: 0 auto;
   transition: 0.2s;
-  z-index: 3;
+  z-index: 800;
 
   &.light {
     background-color: colors.$parchment;
@@ -37,6 +36,45 @@ nav {
       height: 20px;
       margin-right: 5px;
       animation: spin 3s linear infinite;
+    }
+  }
+
+  @include mixins.sm-510 {
+    .logo {
+      padding-left: 1rem;
+      #theme-toggle {
+        width: 30px;
+        height: 30px;
+      }
+      .logo__name {
+        display: none;
+      }
+    }
+  }
+
+  @include mixins.xs-480 {
+    .logo {
+      padding-left: 1rem;
+      #theme-toggle {
+        width: 30px;
+        height: 30px;
+      }
+      .logo__name {
+        display: none;
+      }
+    }
+  }
+
+  @include mixins.xxs-max-479 {
+    .logo {
+      padding-left: 1rem;
+      #theme-toggle {
+        width: 30px;
+        height: 30px;
+      }
+      .logo__name {
+        display: none;
+      }
     }
   }
 }

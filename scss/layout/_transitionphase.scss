@@ -1,6 +1,28 @@
+@use "./mixins";
+
 #breakpoint {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  @include mixins.lg-992 {
+    min-height: 0;
+  }
+
+  @include mixins.md-768 {
+    min-height: 0;
+  }
+
+  @include mixins.sm-510 {
+    min-height: 0;
+  }
+
+  @include mixins.xs-480 {
+    min-height: 0;
+  }
+
+  @include mixins.xxs-max-479 {
+    min-height: 0;
+  }
 }
