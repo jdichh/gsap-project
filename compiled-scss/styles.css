@@ -324,7 +324,7 @@ body {
 .container {
   overflow: hidden;
   width: 100%;
-  max-width: 2560px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -338,14 +338,14 @@ body {
   width: 7rem;
   height: 100vh;
   opacity: 0;
-  margin-left: 240px;
+  margin-left: 250px;
   background-color: #a04636;
 }
 #stripes .stripe__two {
   overflow: hidden;
   position: fixed;
   width: 7rem;
-  margin-left: 390px;
+  margin-left: 400px;
   opacity: 0;
   z-index: 2;
   height: 100vh;
@@ -355,7 +355,7 @@ body {
   overflow: hidden;
   position: fixed;
   width: 7rem;
-  margin-left: 540px;
+  margin-left: 550px;
   opacity: 0;
   height: 100vh;
   background-color: #c5a94b;
@@ -367,7 +367,7 @@ body {
   transform: translateY(-50%);
   margin-left: 9.5rem;
   height: 65vh;
-  width: 30vw;
+  width: 32vw;
   overflow: hidden;
   z-index: 3;
   pointer-events: none;
@@ -382,22 +382,33 @@ body {
 }
 @media (min-width: 3840px) and (max-width: 5119px) {
   .canvas-container {
-    width: 15vw;
+    margin-left: 6rem;
+    height: 52.5vh;
+    width: 20vw;
   }
 }
 @media (min-width: 3440px) and (max-width: 3839px) {
   .canvas-container {
-    width: 15vw;
+    margin-left: 5rem;
+    height: 55vh;
+    width: 22vw;
   }
 }
 @media (min-width: 2560px) and (max-width: 3439px) {
   .canvas-container {
-    width: 22.5vw;
+    margin-left: 9rem;
+    width: 57.5vh;
+    width: 24vw;
   }
 }
-@media (min-width: 1200px) and (max-width: 2559px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
   .canvas-container {
-    width: 35vw;
+    width: 32vw;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .canvas-container {
+    width: 40vw;
   }
 }
 
@@ -646,39 +657,39 @@ body {
   line-height: 1.6;
 }
 
-#breakpoint {
+#question {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 3;
 }
-#breakpoint .breakpoint-section {
+#question .question-section {
   height: 100vh;
   display: flex;
   align-items: center;
 }
-#breakpoint .breakpoint-section .breakpoint-content {
+#question .question-section .question-content {
   margin-inline: 1rem;
   width: 100%;
   max-width: 850px;
   position: relative;
   padding: 1rem;
 }
-#breakpoint .breakpoint-section .breakpoint-content .breakpoint-content__title {
+#question .question-section .question-content .question-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
   text-align: right;
 }
-#breakpoint .breakpoint-section .breakpoint-content .breakpoint-content__title .question {
+#question .question-section .question-content .question-content__title .question {
   font-style: italic;
 }
-#breakpoint .breakpoint-section .breakpoint-content .breakpoint-content__text {
+#question .question-section .question-content .question-content__text {
   text-align: right;
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-#the-big-question {
+#breakpoint {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -7,7 +7,7 @@
   transform: translateY(-50%);
   margin-left: 9.5rem;
   height: 65vh;
-  width: 30vw;
+  width: 32vw;
   overflow: hidden;
   z-index: 3;
   pointer-events: none;
@@ -20,19 +20,29 @@
   }
 
   @include mixins.uw-3840{
-    width: 15vw;
+    margin-left: 6rem;
+    height: 52.5vh;
+    width: 20vw;
   }
 
   @include mixins.uw-3440{
-    width: 15vw;
+    margin-left: 5rem;
+    height: 55vh;
+    width: 22vw;
   }
 
   @include mixins.uw-2560{
-    width: 22.5vw;
+    margin-left: 9rem;
+    width: 57.5vh;
+    width: 24vw;
   }
 
-  @include mixins.xl-screen{
-    width: 35vw;
+  @include mixins.xxl-screen{
+    width: 32vw;
+  }
+
+  @include mixins.lg-screen{
+    width: 40vw;
   }
 }
 

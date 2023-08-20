@@ -76,6 +76,7 @@ gsap.fromTo(".feature-section",{
 ///// ScrollTriggers
 gsap.registerPlugin(ScrollTrigger);
 
+
 function saveAnimationProgress(key, value) {
   localStorage.setItem(key, value);
 }
@@ -87,6 +88,18 @@ function getSavedAnimationProgress(key) {
 function animateCanvasAndStripes() {
   const savedCanvasProgress = getSavedAnimationProgress('canvasProgress');
   const canvasContainer = document.querySelector('.canvas-container');
+  
+  let xOffset;
+
+  if (window.innerWidth >= 5120) {
+    xOffset = window.innerWidth * 0.325;
+  } else if (window.innerWidth >= 3840) {
+    xOffset = window.innerWidth * 0.425;
+  } else if (window.innerWidth >= 3440) {
+    xOffset = window.innerWidth * 0.475;
+  }  else if (window.innerWidth >= 2560) {
+    xOffset = window.innerWidth * 0.425;
+  }
 
   const canvasAnimation = gsap.fromTo(
     canvasContainer,
@@ -94,10 +107,10 @@ function animateCanvasAndStripes() {
       x: savedCanvasProgress || 0,
     },
     {
-      x: '165%',
+      x: xOffset,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#the-big-question',
+        trigger: '#breakpoint',
         start: 'top center',
         end: 'bottom center',
         scrub: true,
@@ -116,10 +129,10 @@ function animateCanvasAndStripes() {
       x: savedStripesProgress || 0,
     },
     {
-      x: '845%',
+      x: xOffset,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#the-big-question',
+        trigger: '#breakpoint',
         start: 'top center',
         end: 'bottom center',
         scrub: true,

@@ -216,9 +216,9 @@ window.addEventListener("resize", () => {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 
-  let scaleFactor = Math.min(width, height) / 1000;
+  let scaleFactor = Math.min(width, height) / 900;
 
-  const minScale = 0.8;
+  const minScale = 0.95;
   const maxScale = 1.5; 
   scaleFactor = Math.max(minScale, Math.min(maxScale, scaleFactor));
 

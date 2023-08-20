@@ -23,11 +23,17 @@
 }
 
 @mixin xl-screen {
-  @media (min-width: 1200px) and (max-width: 2559px) {
+  @media (min-width: 1200px) and (max-width: 1919px) {
     @content;
   }
 }
 
+@mixin xxl-screen {
+    @media (min-width: 1920px) and (max-width: 2559px) {
+      @content;
+    }
+  }
+  
 @mixin uw-2560 {
   @media (min-width: 2560px) and (max-width: 3439px)  {
     @content;

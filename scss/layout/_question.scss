@@ -1,26 +1,26 @@
 @use "../global/typography";
 @use "../global/colors";
 
-#breakpoint {
+#question {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 3;
 
-  .breakpoint-section {
+  .question-section {
     // outline: 1px solid red;
     height: 100vh;
     display: flex;
     align-items: center;
 
-    .breakpoint-content {
+    .question-content {
       margin-inline: 1rem;
       width: 100%;
       max-width: 850px;
       position: relative;
       padding: 1rem;
 
-      .breakpoint-content__title {
+      .question-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
@@ -30,7 +30,7 @@
         }
       }
 
-      .breakpoint-content__text {
+      .question-content__text {
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.6;
