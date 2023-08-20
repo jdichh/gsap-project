@@ -825,37 +825,6 @@ nav .logo .logo__h1 {
   }
 }
 
-.order-button {
-  text-decoration: none;
-  transition: 0.2s ease;
-  float: right;
-  padding: 0.7rem 1.4rem;
-  border-radius: 2px;
-  font-size: 1.2rem;
-  background-color: #222222;
-  color: #f0e9d8;
-}
-.order-button:hover {
-  background-color: #c5a94b;
-  color: #f0e9d8;
-}
-.order-button.light {
-  background-color: #222222;
-  color: #f0e9d8;
-}
-.order-button.light:hover {
-  background-color: #c5a94b;
-  color: #222222;
-}
-.order-button.dark {
-  background-color: #a97d41;
-  color: #222222;
-}
-.order-button.dark:hover {
-  background-color: #c5a94b;
-  color: #222222;
-}
-
 #features {
   display: flex;
   flex-direction: column;
@@ -1088,4 +1057,35 @@ body {
   #breakpoint2 {
     min-height: 0;
   }
+}
+
+.order-button {
+  text-decoration: none;
+  transition: 0.2s ease;
+  float: right;
+  padding: 0.7rem 1.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  background-color: #222222;
+  color: #f0e9d8;
+}
+.order-button:hover {
+  background-color: #c5a94b;
+  color: #f0e9d8;
+}
+.order-button.light {
+  background-color: #222222;
+  color: #f0e9d8;
+}
+.order-button.light:hover {
+  background-color: #c5a94b;
+  color: #222222;
+}
+.order-button.dark {
+  background-color: #a97d41;
+  color: #222222;
+}
+.order-button.dark:hover {
+  background-color: #c5a94b;
+  color: #222222;
 }/*# sourceMappingURL=styles.css.map */

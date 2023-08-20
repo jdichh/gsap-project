@@ -24,7 +24,7 @@
       position: relative;
       padding: 1rem;
       // outline: 1px solid red;
-
+      
       @include mixins.xxs-max-479 {
         top: 18vh;
         padding: 0.5rem;
@@ -55,42 +55,6 @@
           font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
         }
       }
-    }
-  }
-}
-
-.order-button {
-  text-decoration: none;
-  transition: 0.2s ease;
-  float: right;
-  padding: 0.7rem 1.4rem;
-  border-radius: 2px;
-  font-size: 1.2rem;
-  background-color: colors.$vintage-black;
-  color: colors.$parchment;
-
-  &:hover {
-    background-color: colors.$light-gold;
-    color: colors.$parchment;
-  }
-
-  &.light {
-    background-color: colors.$vintage-black;
-    color: colors.$parchment;
-
-    &:hover {
-      background-color: colors.$light-gold;
-      color: colors.$vintage-black;
-    }
-  }
-
-  &.dark {
-    background-color: colors.$brass;
-    color: colors.$vintage-black;
-
-    &:hover {
-      background-color: colors.$light-gold;
-      color: colors.$vintage-black;
     }
   }
 }

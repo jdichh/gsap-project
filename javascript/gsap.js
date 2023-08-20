@@ -23,7 +23,7 @@ gsap.fromTo(
   "nav",
   {
     opacity: 0,
-    y: -300,
+    y: -800,
   },
   {
     opacity: 1,

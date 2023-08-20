@@ -1,0 +1,37 @@
+@use "../global/colors";
+
+.order-button {
+  text-decoration: none;
+  transition: 0.2s ease;
+  float: right;
+  padding: 0.7rem 1.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  background-color: colors.$vintage-black;
+  color: colors.$parchment;
+
+  &:hover {
+    background-color: colors.$light-gold;
+    color: colors.$parchment;
+  }
+
+  &.light {
+    background-color: colors.$vintage-black;
+    color: colors.$parchment;
+
+    &:hover {
+      background-color: colors.$light-gold;
+      color: colors.$vintage-black;
+    }
+  }
+
+  &.dark {
+    background-color: colors.$brass;
+    color: colors.$vintage-black;
+
+    &:hover {
+      background-color: colors.$light-gold;
+      color: colors.$vintage-black;
+    }
+  }
+}
