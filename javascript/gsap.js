@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const body = document.body
 body.classList.add("loading");
@@ -10,7 +11,7 @@ gsap.fromTo(".canvas-container",{
 {
   opacity: 1,
   x: 0,
-  delay: 4.6,
+  delay: 2.25,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -23,7 +24,7 @@ gsap.fromTo("nav",{
 {
   opacity: 1,
   y: 0,
-  delay: 5,
+  delay: 2.5,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -34,9 +35,9 @@ gsap.fromTo(".main-content",{
   x: 800,
 },
 {
-  opacity: 5.25,
+  opacity: 1,
   x: 0,
-  delay: 5,
+  delay: 2.75,
   ease: "expo.inOut",
   duration: 0.5,
 }
@@ -49,7 +50,7 @@ gsap.fromTo(".main-content__order__button",{
 {
   opacity: 1,
   x: 0,
-  delay: 5.5,
+  delay: 3,
   ease: "expo.inOut",
   duration: 1,
   onComplete: () => {
@@ -65,8 +66,40 @@ gsap.fromTo(".feature-section",{
 {
   opacity: 1,
   x: 0,
-  delay: 5.75,
+  delay: 3.25,
   ease: "expo.inOut",
   duration: 1,
 }
 );
+
+
+///// ScrollTriggers
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo('.canvas-container', {
+  x: 0, 
+},
+{
+  x: '100%',
+  ease: 'none', 
+  scrollTrigger: {
+    trigger: '#the-big-question',
+    start: 'top center',
+    end: 'bottom center',
+    scrub: true,
+  },
+});
+
+gsap.fromTo('.stripe__one, .stripe__two, .stripe__three', {
+  x: 0, 
+},
+{
+  x: '920%',
+  ease: 'none', 
+  scrollTrigger: {
+    trigger: '#the-big-question',
+    start: 'top center',
+    end: 'bottom center',
+    scrub: true,
+  },
+});

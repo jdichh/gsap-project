@@ -1,32 +1,36 @@
 @use "../global/typography";
 @use "../global/colors";
 
-#features {
+#breakpoint {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 3;
 
-  .feature-section {
+  .breakpoint-section {
     // outline: 1px solid red;
     height: 100vh;
     display: flex;
     align-items: center;
 
-    .features-content {
+    .breakpoint-content {
       margin-inline: 1rem;
       width: 100%;
       max-width: 850px;
       position: relative;
       padding: 1rem;
 
-      .features-content__title {
+      .breakpoint-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
         // outline: 1px solid red;
+        .question {
+          font-style: italic;
+        }
       }
 
-      .features-content__text {
+      .breakpoint-content__text {
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.6;

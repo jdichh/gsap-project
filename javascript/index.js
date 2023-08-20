@@ -33,7 +33,7 @@ renderer.shadowMap.autoUpdate = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.8;
+renderer.toneMappingExposure = 1.5
 
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -43,7 +43,7 @@ container.appendChild(renderer.domElement);
 const loadingSpinner = document.getElementById("loading-spinner");
 
 Promise.all([
-  new Promise((resolve) => loader.load("/steampunk_watch_4k.glb", resolve)),
+  new Promise((resolve) => loader.load("/steampunk_watch.glb", resolve)),
 ])
   .then(([gltf1]) => {
     watch = gltf1.scene;
@@ -52,11 +52,14 @@ Promise.all([
     watch.position.z = 0.9; // Increase to move to the left, and decrease to move to the right.
 
     watch.rotation.x = 1.5;
+
     // Positive for counter-clockwise, negative for counter-clockwise.
+    // Upright.
     watch.rotation.y = 1.57;
+    // At an angle.
     // watch.rotation.y = -0.8
 
-    // Positive for downwards, negative for upwards.
+    // Negative for downwards, positive for upwards.
     watch.rotation.z = 0.1;
 
     watch.scale.set(1.2, 1.2, 1.2);
@@ -75,6 +78,7 @@ Promise.all([
     container.style.display = "block";
 
     const timeLine = gsap.timeline();
+    
     timeLine.fromTo(
       ".stripe__one",
       {
@@ -131,7 +135,7 @@ Promise.all([
   });
 
 ///// Instantiate lights
-const DIRECTIONAL_LIGHT_INTENSITY = 3;
+const DIRECTIONAL_LIGHT_INTENSITY = 3.5;
 const AMBIENT_LIGHT_INTENSITY = 1;
 const DEFAULT_SPOTLIGHT_INTENSITY = 40; // Will be overridden by the spotlightParams below.
 const WHITE_LIGHTING = 0xffffff;
@@ -159,7 +163,7 @@ const rearSpotlight = new THREE.SpotLight(
 );
 
 ///// Light configurations
-directionalLight.position.set(12, 25, 50);
+directionalLight.position.set(5.5, -20, 50); // X, Y, Z
 directionalLight.castShadow = true;
 directionalLight.shadow.bias = -0.002; // Fixes shadow artifacts.
 directionalLight.shadow.mapSize.width = 1024;
@@ -236,42 +240,42 @@ const BRASS = "#B8A373";
 
 const spotlightParams = {
   rightSpotlightColor: BRASS,
-  rightSpotlightIntensity: 21,
+  rightSpotlightIntensity: 20,
   rightSpotlightAngle: 1,
   rightSpotlightPenumbra: 0.65,
-  rightSpotlightDistance: 15,
+  rightSpotlightDistance: 10,
 
   leftSpotlightColor: BRASS,
-  leftSpotlightIntensity: 2,
+  leftSpotlightIntensity: 20,
   leftSpotlightAngle: 1,
   leftSpotlightPenumbra: 0.65,
-  leftSpotlightDistance: 15,
+  leftSpotlightDistance: 10,
 
   rearSpotlightColor: BRASS,
-  rearSpotlightIntensity: 50,
+  rearSpotlightIntensity: 30,
   rearSpotlightAngle: 1,
   rearSpotlightPenumbra: 0.65,
-  rearSpotlightDistance: 50,
+  rearSpotlightDistance: 10,
 };
 
 ///// DevTools Area
-// const lightParameters = {
-//   lightIntensity: DIRECTIONAL_LIGHT_INTENSITY,
-//   lightX: directionalLight.position.x,
-//   lightY: directionalLight.position.y,
-//   lightZ: directionalLight.position.z,
-// };
+const lightParameters = {
+  lightIntensity: DIRECTIONAL_LIGHT_INTENSITY,
+  lightX: directionalLight.position.x,
+  lightY: directionalLight.position.y,
+  lightZ: directionalLight.position.z,
+};
 
-// function updateDirectionalLight() {
-//   directionalLight.intensity = lightParameters.lightIntensity;
-//   directionalLight.position.set(
-//     lightParameters.lightX,
-//     lightParameters.lightY,
-//     lightParameters.lightZ
-//   );
-// }
+function updateDirectionalLight() {
+  directionalLight.intensity = lightParameters.lightIntensity;
+  directionalLight.position.set(
+    lightParameters.lightX,
+    lightParameters.lightY,
+    lightParameters.lightZ
+  );
+}
 
-// /// Enable DEV gui
+/// Enable DEV gui
 // const gui = new GUI();
 // const lightFolder = gui.addFolder("Directional Light");
 // lightFolder
@@ -389,17 +393,15 @@ rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 
 ///// Main Stuff
 const controls = new OrbitControls(camera, container);
-controls.enableDamping = true;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 1;
-controls.enablePan = false;
+controls.autoRotateSpeed = 0.9;
 controls.maxDistance = 20;
 controls.minDistance = 20;
 camera.position.z = 20;
 
 function showOnCanvas() {
   controls.update();
-  // updateDirectionalLight();
+  updateDirectionalLight();
 
   renderer.render(scene, camera);
   requestAnimationFrame(showOnCanvas);

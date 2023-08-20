@@ -1,22 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const nav = document.querySelector("nav");
-  const navLinks = nav.querySelectorAll(".nav__links li a");
-
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const threshold = 1;
-
-    if (scrollPosition > threshold) {
-      console.log("scroll");
-      nav.classList.add("scrolled");
-      navLinks.forEach((link) => link.classList.add("scrolled"));
-    } else {
-      nav.classList.remove("scrolled");
-      navLinks.forEach((link) => link.classList.remove("scrolled"));
-    }
-  });
+// Store the scroll position in session storage when the page is being unloaded.
+window.addEventListener("beforeunload", () => {
+  sessionStorage.setItem("scrollPosition", window.scrollY);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.scrollTo(0, 0);
-});
+// Restore the scroll position when the page is fully loaded.
+window.onload = () => {
+  const scrollPosition = sessionStorage.getItem("scrollPosition");
+  if (scrollPosition) {
+    window.scrollTo(0, scrollPosition);
+  }
+};

@@ -1,33 +1,33 @@
 @use "../global/typography";
 @use "../global/colors";
 
-#features {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+#reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-  .feature-section {
+  .reviews-section {
     // outline: 1px solid red;
     height: 100vh;
     display: flex;
     align-items: center;
 
-    .features-content {
+    .reviews-content {
       margin-inline: 1rem;
       width: 100%;
       max-width: 850px;
       position: relative;
       padding: 1rem;
 
-      .features-content__title {
+      .reviews-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
-        text-align: right;
+        text-align: left;
         // outline: 1px solid red;
       }
 
-      .features-content__text {
-        text-align: right;
+      .reviews-content__text {
+        text-align: left;
         font-size: 1.2rem;
         line-height: 1.6;
         // outline: 1px solid red;

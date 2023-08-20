@@ -50,7 +50,7 @@ nav {
     transition: 0.2s;
     padding-inline: 2rem;
     &:hover {
-      transform: scale(1.15);
+      color: colors.$light-gold;
     }
 
     a {
