@@ -76,30 +76,63 @@ gsap.fromTo(".feature-section",{
 ///// ScrollTriggers
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.fromTo('.canvas-container', {
-  x: 0, 
-},
-{
-  x: '100%',
-  ease: 'none', 
-  scrollTrigger: {
-    trigger: '#the-big-question',
-    start: 'top center',
-    end: 'bottom center',
-    scrub: true,
-  },
-});
+function saveAnimationProgress(key, value) {
+  localStorage.setItem(key, value);
+}
 
-gsap.fromTo('.stripe__one, .stripe__two, .stripe__three', {
-  x: 0, 
-},
-{
-  x: '920%',
-  ease: 'none', 
-  scrollTrigger: {
-    trigger: '#the-big-question',
-    start: 'top center',
-    end: 'bottom center',
-    scrub: true,
-  },
-});
+function getSavedAnimationProgress(key) {
+  return localStorage.getItem(key);
+}
+
+function animateCanvasAndStripes() {
+  const savedCanvasProgress = getSavedAnimationProgress('canvasProgress');
+  const canvasContainer = document.querySelector('.canvas-container');
+
+  const canvasAnimation = gsap.fromTo(
+    canvasContainer,
+    {
+      x: savedCanvasProgress || 0,
+    },
+    {
+      x: '165%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#the-big-question',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+        onUpdate: (self) => {
+          saveAnimationProgress('canvasProgress', self.progress);
+        },
+      },
+    }
+  );
+
+  const savedStripesProgress = getSavedAnimationProgress('stripesProgress');
+
+  gsap.fromTo(
+    '.stripe__one, .stripe__two, .stripe__three',
+    {
+      x: savedStripesProgress || 0,
+    },
+    {
+      x: '845%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#the-big-question',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+        onUpdate: (self) => {
+          saveAnimationProgress('stripesProgress', self.progress);
+        },
+      },
+    }
+  );
+
+  if (savedCanvasProgress) {
+    canvasAnimation.progress(Number(savedCanvasProgress));
+  }
+}
+
+animateCanvasAndStripes();

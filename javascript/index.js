@@ -33,7 +33,7 @@ renderer.shadowMap.autoUpdate = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.5
+renderer.toneMappingExposure = 1.5;
 
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -49,7 +49,7 @@ Promise.all([
     watch = gltf1.scene;
 
     watch.position.y = 0;
-    watch.position.z = 0.9; // Increase to move to the left, and decrease to move to the right.
+    watch.position.z = 1;
 
     watch.rotation.x = 1.5;
 
@@ -62,7 +62,7 @@ Promise.all([
     // Negative for downwards, positive for upwards.
     watch.rotation.z = 0.1;
 
-    watch.scale.set(1.2, 1.2, 1.2);
+    watch.scale.set(1.1, 1.1, 1.1);
 
     /// Enable watch to cast and receive shadows.
     watch.traverse((child) => {
@@ -78,7 +78,7 @@ Promise.all([
     container.style.display = "block";
 
     const timeLine = gsap.timeline();
-    
+
     timeLine.fromTo(
       ".stripe__one",
       {
@@ -127,7 +127,6 @@ Promise.all([
       }
     );
 
-    scaleModel();
     showOnCanvas();
   })
   .catch((error) => {
@@ -207,32 +206,23 @@ scene.add(rightSpotlight);
 scene.add(rearSpotlight);
 
 ///// Responsiveness
-const minScale = 1;
-const maxScale = 1.2;
-let currentScale = 1.2;
-
-function updateModelScale(scale) {
-  scale = Math.max(minScale, Math.min(maxScale, scale));
-
-  watch.scale.set(scale, scale, scale);
-}
-
-function scaleModel() {
-  const scaleFactor = container.clientWidth / 575;
-  currentScale = scaleFactor;
-  updateModelScale(currentScale);
-}
-
 window.addEventListener("resize", () => {
   const width = container.clientWidth;
   const height = container.clientHeight;
+
   renderer.setSize(width, height);
   renderer.setPixelRatio(window.devicePixelRatio);
 
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
 
-  scaleModel();
+  let scaleFactor = Math.min(width, height) / 1000;
+
+  const minScale = 0.8;
+  const maxScale = 1.5; 
+  scaleFactor = Math.max(minScale, Math.min(maxScale, scaleFactor));
+
+  watch.scale.set(scaleFactor, scaleFactor, scaleFactor);
 });
 
 const WHITE = "#FFFFFF";
@@ -393,8 +383,10 @@ rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 
 ///// Main Stuff
 const controls = new OrbitControls(camera, container);
+controls.enableDamping = true;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 0.9;
+controls.autoRotateSpeed = 1;
+controls.enablePan = false;
 controls.maxDistance = 20;
 controls.minDistance = 20;
 camera.position.z = 20;

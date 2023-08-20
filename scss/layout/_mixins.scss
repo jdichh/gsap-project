@@ -1,0 +1,53 @@
+@mixin xs-screen {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin sm-screen {
+  @media (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md-screen {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin xl-screen {
+  @media (min-width: 1200px) and (max-width: 2559px) {
+    @content;
+  }
+}
+
+@mixin uw-2560 {
+  @media (min-width: 2560px) and (max-width: 3439px)  {
+    @content;
+  }
+}
+
+@mixin uw-3440 {
+  @media (min-width: 3440px) and (max-width: 3839px)  {
+    @content;
+  }
+}
+
+@mixin uw-3840 {
+  @media (min-width: 3840px) and (max-width: 5119px) {
+    @content;
+  }
+}
+
+@mixin uw-5120 {
+  @media (min-width: 5120px) {
+    @content;
+  }
+}
