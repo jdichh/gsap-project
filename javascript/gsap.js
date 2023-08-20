@@ -110,7 +110,7 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
-  ".main-content__order__button",
+  ".order-button",
   {
     opacity: 0,
     x: 800,
