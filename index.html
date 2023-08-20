@@ -1,351 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Experience the art of time and fine craftsmanship of the KHRONOMECHANICA Vintora wristwatch."
-    />
-    <link rel="stylesheet" href="compiled-scss/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="shortcut icon" href="./loading.svg" type="image/x-icon" />
-    <title>KHRONOMECHANICA Vintora</title>
-  </head>
-  <body>
-    <div id="warning"></div>
 
-    <div id="loading-container">
-      <img src="./loading.svg" alt="A loading spinner." id="loading-spinner" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Experience the art of time and fine craftsmanship of the KHRONOMECHANICA Vintora wristwatch." />
+  <link rel="stylesheet" href="compiled-scss/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./loading.svg" type="image/x-icon" />
+  <title>KHRONOMECHANICA | Vintora</title>
+</head>
+
+<body>
+  <div id="warning"></div>
+
+  <div id="loading-container">
+    <img src="./loading.svg" alt="A loading spinner." id="loading-spinner" />
+  </div>
+
+  <nav>
+    <header class="logo">
+      <h1>
+        <img src="./loading.svg" alt="Company logo and theme toggler." class="logo__h1" id="theme-toggle" /><span
+          class="logo__name">KHRONOMECHANICA</span>
+      </h1>
+    </header>
+    <ul class="nav__links">
+      <li>
+        <span class="home-button"><a href="#main">HOME</a></span>
+      </li>
+      <li><a href="#features_q">FEATURES</a></li>
+      <li><a href="#reviews_q">REVIEWS</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div id="stripes">
+      <div class="stripe__one"></div>
+      <div class="stripe__two"></div>
+      <div class="stripe__three"></div>
     </div>
 
-    <nav>
-      <header class="logo">
-        <h1>
-          <img
-            src="./loading.svg"
-            alt="Company logo and theme toggler."
-            class="logo__h1"
-            id="theme-toggle"
-          /><span class="logo__name">KHRONOMECHANICA</span>
-        </h1>
-      </header>
-      <ul class="nav__links">
-        <li>
-          <span class="home-button"><a href="#main">HOME</a></span>
-        </li>
-        <li><a href="#features_q">FEATURES</a></li>
-        <li><a href="#reviews_q">REVIEWS</a></li>
-      </ul>
-    </nav>
+    <div class="canvas-container">
+      <canvas class="webGL"></canvas>
+    </div>
 
-    <div class="container">
-      <div id="stripes">
-        <div class="stripe__one"></div>
-        <div class="stripe__two"></div>
-        <div class="stripe__three"></div>
-      </div>
-
-      <div class="canvas-container">
-        <canvas class="webGL"></canvas>
-      </div>
-
-      <section id="watch-info">
-        <section id="main">
-          <section class="main-section">
-            <div class="main-content">
-              <h1 class="main-content__title">
-                <span class="the-the">The</span> KHRONOMECHANICA Vintora.
-              </h1>
-              <p class="main-content__text">
-                The <strong>KHRONOMECHANICA</strong> company intertwines
-                cutting-edge craftsmanship and the rich histories of old. Our
-                steampunk-inspired timepieces are a fusion of age-old aesthetics
-                and contemporary innovation. Our meticulously crafted timepieces
-                pay homage to the intricate mechanisms and designs of the
-                Victorian era, all while embracing the technological
-                advancements of today. From the intricate gears that turn with
-                each tick, to the rich patina of aged metals, our watches are
-                more than instruments of timekeeping. They are wearable works of
-                art that spark conversations and inspire curiosity. And the
-                <strong>Vintora</strong> is yet another one of our many
-                masterpieces.
-              </p>
-              <a href="#" class="main-content__order__button order-button"
-                >Order</a
-              >
-            </div>
-          </section>
-        </section>
-
-        <section id="features_q">
-          <section class="question-section">
-            <div class="question-content">
-              <h1 class="question-content__title">
-                So you're probably thinking,
-                <span class="question"
-                  >"What sets it apart from the other countless wristwatches in
-                  the market aside from its looks?"</span
-                >
-              </h1>
-              <p class="question-content__text">Well, scroll down.</p>
-            </div>
-          </section>
-        </section>
-
-        <section id="features">
-          <section class="feature-section" id="feature2">
-            <div class="features-content">
-              <h1 class="features-content__title">KHRONOAccelerator™</h1>
-              <p class="features-content__text">
-                At the heart of the watch lies a small chamber that houses a
-                miniature steam engine. As water within the chamber turns to
-                steam, it powers a series of gears responsible for timekeeping.
-                The soft hiss of steam's release adds an auditory dimension to
-                the watch's operation, making it a true embodiment of steampunk
-                innovation.
-              </p>
-            </div>
-          </section>
-
-          <section class="feature-section" id="feature2">
-            <div class="features-content">
-              <h1 class="features-content__title">Harnessing Steam.</h1>
-              <p class="features-content__text">
-                At the heart of the watch lies a small chamber that houses a
-                miniature steam engine. As water within the chamber turns to
-                steam, it powers a series of gears responsible for timekeeping.
-                The soft hiss of steam's release adds an auditory dimension to
-                the watch's operation, making it a true embodiment of steampunk
-                innovation.
-              </p>
-            </div>
-          </section>
-
-          <section class="feature-section" id="feature3">
-            <div class="features-content">
-              <h1 class="features-content__title">Tesla Coil Power Reserve.</h1>
-              <p class="features-content__text">
-                The concealed Tesla coil within the watch absorbs ambient
-                electrical energy from the surroundings, extending the power
-                reserve beyond traditional limits. This innovative feature not
-                only enhances the watch's functionality but also exudes an air
-                of scientific marvel, embodying the spirit of steampunk
-                ingenuity.
-              </p>
-            </div>
-          </section>
-
-          <section class="feature-section" id="feature4">
-            <div class="features-content">
-              <h1 class="features-content__title">
-                Multidimensional Time Display.
-              </h1>
-              <p class="features-content__text">
-                The multidimensional time display challenges conventional norms
-                by using rotating gears to convey the passage of time. When the
-                hour, minute, and second gears align, the exact time is revealed
-                through precision-cut openings in the watch's face, providing a
-                unique and captivating visual experience.
-              </p>
-            </div>
-          </section>
-
-          <section class="feature-section" id="feature5">
-            <div class="features-content">
-              <h1 class="features-content__title">Magnetic Chronograph.</h1>
-              <p class="features-content__text">
-                The watch's magnetic chronograph brings precision to a new
-                level. Inside the watch, an array of tiny magnets interacts with
-                finely tuned magnetic accelerators, enabling users to measure
-                time intervals with exceptional accuracy. This innovative
-                mechanism adds a touch of intrigue to the watch's technological
-                prowess.
-              </p>
-            </div>
-          </section>
-
-          <section class="feature-section" id="feature6">
-            <div class="features-content">
-              <h1 class="features-content__title">Telescopic Zoom Lens.</h1>
-              <p class="features-content__text">
-                A true marvel of craftsmanship, the telescopic lens allows
-                wearers to peer into the inner workings of the watch. With a
-                simple twist, the lens reveals hidden artistry and
-                micro-engravings on the gears, creating an interactive
-                connection between the wearer and the watch's intricate details.
-              </p>
-            </div>
-          </section>
-        </section>
-
-        <section id="reviews_q">
-          <section class="question-section">
-            <div class="question-content">
-              <h1 class="question-content__title">
-                You might say,
-                <span class="question"
-                  >"Sure, cool. But what did people say in the past about
-                  it?"</span
-                >
-              </h1>
-              <p class="question-content__text">Well, scroll down.</p>
-            </div>
-          </section>
-        </section>
-
-        <section id="breakpoint"></section>
-
-        <section id="reviews">
-          <section class="reviews-section" id="review1">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                GearheadGuru87  
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "This watch makes me feel like I've stepped out of a time
-                  machine and into a fashion show where the main event is me
-                  adjusting my cuffs dramatically. I'm pretty sure I heard a clock
-                  tower somewhere ring its bells to honor my impeccable sense of
-                  style."
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="reviews-section" id="review2">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                WittyWatchWanderer
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>    
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "So I got this steampunk marvel and decided to show it off to a friend. Little did I know that my friend would dub
-                  me 'The Kneegear' and sometimes he'd call me his "Kneegah", whatever those are, from that day on. Yep, you read it
-                  right—apparently, my wrist is so stylish now that my whole identity
-                  revolves around a watch. Honestly, I'm not even mad. I mean, it's not every day you get a watch that turns you into
-                  a somebody all of a sudden. My new title comes with perks, like looking fabulous all the time.
-                  No pressure, right?"
-                </p>
-                <p>
-                  On a serious note, this watch is a real head-turner. The gears, the colors, the craftsmanship—it's like time itself
-                  got an upgrade. And yeah, I might be 'The Kneegear' but honestly, who wouldn't want to be in my shoes... I mean,
-                  wristwear?"
-                </p>
-                <p>
-                  Though, I wonder why everyone around me is laughing?
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="reviews-section" id="review3">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                TickTockTom 
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "I'm practically running late for every appointment just so I can show off this watch. It's like my own personal time
-                  vortex—'Sorry, I'm late, but check out this sweet timepiece!' If you think the gears are cool, wait until you see how
-                  it hypnotizes my friends into doing my bidding."
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="reviews-section" id="review4">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                SteamQueen23 
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "I'm practically running late for every appointment just so I can show off this watch. It's like my own personal time
-                  vortex—'Sorry, I'm late, but check out this sweet timepiece!' If you think the gears are cool, wait until you see how
-                  it hypnotizes my friends into doing my bidding."
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="reviews-section" id="review5">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                FlawlessGearAficionado
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>  
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "Where do I even begin with this watch? Let me tell you, it's like wearing a time-traveling masterpiece on your wrist.
-                  The gears within are so precisely calibrated that they synchronize with the heartbeat of the universe itself. The
-                  craftsmanship is so exquisite that even angels descended from heaven to get a closer look. People stop me on the
-                  street just to catch a glimpse of its perfection.
-                </p>
-                <p>
-                  Every tick and tock feels like the heartbeat of a majestic unicorn, and the way it catches the light is like it's
-                  flirting with celestial bodies. The design is so remarkable that it single-handedly ended a centuries-old debate on
-                  what constitutes 'the pinnacle of elegance.' The strap is made from unicorn hair, and the clasp was forged by the
-                  ancient dwarven blacksmiths of legend.
-                </p>
-                <p>
-                  THREE (3) stars. And I'm being generous."
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="reviews-section" id="review6">
-            <div class="reviews-content">
-              <h1 class="reviews-content__title">
-                GadgetEnthusiast99
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>  
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>  
-                <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating"/>  
-              </h1>
-              <div class="reviews-content__text">
-                <p>
-                  "This watch turned me into a time-traveling, tea-sipping, universe-hopping explorer. People ask me how I manage to
-                  look so put-together all the time. Little do they know, I spilled coffee on my shirt, and this watch is my distraction
-                  strategy."
-                </p>
-              </div>
-            </div>
-          </section>
-        
+    <section id="watch-info">
+      <section id="main">
+        <section class="main-section">
+          <div class="main-content">
+            <h1 class="main-content__title">
+              <span class="the-the">The</span> KHRONOMECHANICA Vintora.
+            </h1>
+            <p class="main-content__text">
+              The <strong>KHRONOMECHANICA</strong> company intertwines
+              cutting-edge craftsmanship and the rich histories of old. Our
+              steampunk-inspired timepieces are a fusion of age-old aesthetics
+              and contemporary innovation. Our meticulously crafted timepieces
+              pay homage to the intricate mechanisms and designs of the
+              Victorian era, all while embracing the technological
+              advancements of today. From the intricate gears that turn with
+              each tick, to the rich patina of aged metals, our watches are
+              more than instruments of timekeeping. They are wearable works of
+              art that spark conversations and inspire curiosity. And the
+              <strong>Vintora</strong> is yet another one of our many
+              masterpieces.
+            </p>
+            <a href="#" class="order-button">Order</a>
+          </div>
         </section>
       </section>
-    </div>
-    <script src="./javascript/themeToggle.js"></script>
-    <script src="./javascript/scroll.js"></script>
-    <script type="module" src="./javascript/gsap.js" defer></script>
-    <script type="module" src="./javascript/index.js" defer></script>
-  </body>
+
+      <section id="features_q">
+        <section class="question-section">
+          <div class="question-content">
+            <h1 class="question-content__title">
+              So you're probably thinking,
+              <span class="question">"What sets it apart from the other countless wristwatches in
+                the market aside from its looks?"</span>
+            </h1>
+            <p class="question-content__text">Well, scroll down.</p>
+          </div>
+        </section>
+      </section>
+
+      <section id="features">
+        <section class="feature-section" id="feature2">
+          <div class="features-content">
+            <h1 class="features-content__title">KHRONOAccelerator™.</h1>
+            <p class="features-content__text">
+              The whimsical touch of the KHRONOAccelerator™ button adds a
+              playful dimension to the watch. Upon activation, a burst of
+              steam propels the gears into a faster tempo, causing time to
+              appear to accelerate momentarily. This feature captures the
+              essence of steampunk's fantastical nature while adding an
+              element of surprise and wonder for the wearer.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature2">
+          <div class="features-content">
+            <h1 class="features-content__title">Magnetic KHRONOgraph™.</h1>
+            <p class="features-content__text">
+              Our Magnetic KHRONOgraph™ brings precision to a new
+              level. Inside the watch, an array of tiny magnets interacts with
+              finely tuned magnetic accelerators, enabling users to measure
+              time intervals with exceptional accuracy. This innovative
+              mechanism adds a touch of intrigue to the watch's technological
+              prowess.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature3">
+          <div class="features-content">
+            <h1 class="features-content__title">Tesla Coil Power Reserve.</h1>
+            <p class="features-content__text">
+              The Tesla coils on the straps absorb ambient
+              electrical energy from the surroundings, extending the power
+              reserve beyond traditional limits. This innovative feature not
+              only enhances the watch's functionality but also exudes an air
+              of scientific marvel, embodying the spirit of steampunk
+              ingenuity.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature4">
+          <div class="features-content">
+            <h1 class="features-content__title">
+              Multidimensional Time Display.
+            </h1>
+            <p class="features-content__text">
+              The multidimensional time display challenges conventional norms
+              by using rotating gears to convey the passage of time. When the
+              hour, minute, and second gears align, the exact time is revealed
+              through precision-cut openings in the watch's face, providing a
+              unique and captivating visual experience.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature5">
+          <div class="features-content">
+            <h1 class="features-content__title">Harnessing Steam.</h1>
+            <p class="features-content__text">
+              At the heart of the watch lies a small chamber that houses a
+              miniature steam engine. As water within the chamber turns to
+              steam, it powers a series of gears responsible for timekeeping.
+              The soft hiss of steam's release adds an auditory dimension to
+              the watch's operation, making it a true embodiment of steampunk
+              innovation.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature6">
+          <div class="features-content">
+            <h1 class="features-content__title">Telescopic Zoom Lens.</h1>
+            <p class="features-content__text">
+              A true marvel of craftsmanship, the telescopic lens allows
+              wearers to peer into the inner workings of the watch. With a
+              simple twist, the lens reveals hidden artistry and
+              micro-engravings on the gears, creating an interactive
+              connection between the wearer and the watch's intricate details.
+            </p>
+          </div>
+        </section>
+
+        <section class="feature-section" id="feature7">
+          <div class="features-content">
+            <h1 class="features-content__title">Aether Compass.</h1>
+            <p class="features-content__text">
+              Blending functionality with steampunk mystique, the aether compass employs aetheric energy to create a
+              reliable
+              navigational tool. The compass needle points toward true north by responding to the subtle vibrations of
+              the aether,
+              making it an essential companion for adventurers and explorers.
+            </p>
+          </div>
+        </section>
+        <!-- end of features section -->
+      </section>
+
+      <section id="reviews_q">
+        <section class="question-section">
+          <div class="question-content">
+            <h1 class="question-content__title">
+              You might say,
+              <span class="question">"Sure, cool. But what did people say in the past about
+                it?"</span>
+            </h1>
+            <p class="question-content__text">Well, scroll down.</p>
+          </div>
+        </section>
+      </section>
+
+      <section id="breakpoint"></section>
+
+      <section id="reviews">
+        <section class="reviews-section" id="review1">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              GearheadGuru87
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "This watch makes me feel like I've stepped out of a time
+                machine and into a fashion show where the main event is me
+                adjusting my cuffs dramatically. I'm pretty sure I heard a clock
+                tower somewhere ring its bells to honor my impeccable sense of
+                style."
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section" id="review2">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              WittyWatchWanderer
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "So I got this steampunk marvel and decided to show it off to a friend. Little did I know that my friend
+                would dub
+                me 'The Kneegear' and sometimes he'd call me his "Kneegah", whatever those are, from that day on. Yep,
+                you read it
+                right—apparently, my wrist is so stylish now that my whole identity
+                revolves around a watch. Honestly, I'm not even mad. I mean, it's not every day you get a watch that
+                turns you into
+                a somebody all of a sudden. My new title comes with perks, like looking fabulous all the time.
+                No pressure, right?"
+              </p>
+              <p>
+                On a serious note, this watch is a real head-turner. The gears, the colors, the craftsmanship—it's like
+                time itself
+                got an upgrade. And yeah, I might be 'The Kneegear' but honestly, who wouldn't want to be in my shoes...
+                I mean,
+                wristwear?"
+              </p>
+              <p>
+                Though, I wonder why everyone around me is laughing?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section" id="review3">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              TickTockTom
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "I'm practically running late for every appointment just so I can show off this watch. It's like my own
+                personal time
+                vortex—'Sorry, I'm late, but check out this sweet timepiece!' If you think the gears are cool, wait
+                until you see how
+                it hypnotizes my friends into doing my bidding."
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section" id="review4">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              SteamQueen23
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "Wearing this watch makes me feel like a time-traveling aristocrat who's always fashionably late. I can
+                almost hear
+                the faint hum of a steam engine as I adjust my monocle and admire the craftsmanship. Plus, the gears
+                help me remember
+                that life's just a series of well-timed cogs!"
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section" id="review5">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              FlawlessGearAficionado
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "Where do I even begin with this watch? Let me tell you, it's like wearing a time-traveling masterpiece
+                on your wrist.
+                The gears within are so precisely calibrated that they synchronize with the heartbeat of the universe
+                itself. The
+                craftsmanship is so exquisite that even angels descended from heaven to get a closer look. People stop
+                me on the
+                street just to catch a glimpse of its perfection.
+              </p>
+              <p>
+                Every tick and tock feels like the heartbeat of a majestic unicorn, and the way it catches the light is
+                like it's
+                flirting with celestial bodies. The design is so remarkable that it single-handedly ended a
+                centuries-old debate on
+                what constitutes 'the pinnacle of elegance.' The strap is made from unicorn hair, and the clasp was
+                forged by the
+                ancient dwarven blacksmiths of legend.
+              </p>
+              <p>
+                THREE (3) stars. And I'm being generous."
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section" id="review6">
+          <div class="reviews-content">
+            <h1 class="reviews-content__title">
+              GadgetEnthusiast99
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+              <img src="./loading.svg" alt="star (or gear) rating" class="gear-rating" />
+            </h1>
+            <div class="reviews-content__text">
+              <p>
+                "This watch turned me into a time-traveling, tea-sipping, universe-hopping explorer. People ask me how I
+                manage to
+                look so put-together all the time. Little do they know, I spilled coffee on my shirt, and this watch is
+                my distraction
+                strategy."
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- end of reviews section -->
+      </section>
+
+      <section id="purchase_q">
+        <section class="question-section">
+          <div class="question-content">
+            <h1 class="question-content__title">
+              Now we ask you,
+              <span class="question">"Why don't you treat yourself something nice? Get yourself one for PHP 1,299,999
+                only."</span>
+            </h1>
+            <a href="#" class="order-button">Order</a>
+          </div>
+        </section>
+      </section>
+      <!-- end of #watch-info -->
+    </section>
+
+  </div>
+  <script src="./javascript/themeToggle.js"></script>
+  <script src="./javascript/scroll.js"></script>
+  <script type="module" src="./javascript/gsap.js" defer></script>
+  <script type="module" src="./javascript/index.js" defer></script>
+</body>
+
 </html>

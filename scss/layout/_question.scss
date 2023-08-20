@@ -63,3 +63,21 @@
   }
 }
 
+#purchase_q {
+  @extend #features_q, #reviews_q;
+  align-items: flex-start;
+
+  .question-section {
+    .question-content {
+      .question-content__title {
+        text-align: left;
+        .question {
+          font-style: italic;
+        }
+      }
+      .question-content__text {
+        text-align: left;
+      }
+    }
+  }
+}

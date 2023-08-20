@@ -95,6 +95,21 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
+  "#purchase_q",
+  {
+    opacity: 0,
+    x: -800,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    delay: 2.75,
+    ease: "expo.inOut",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(
   ".main-content__order__button",
   {
     opacity: 0,
@@ -132,9 +147,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 let canvasAnimation;
 let stripesAnimation;
+// let resetCanvasAnimation;
+// let resetStripesAnimation;
 
 function animateCanvasAndStripes() {
-  const canvasContainer = document.querySelector(".canvas-container");
 
   function resetAnimations() {
     if (canvasAnimation) {
@@ -143,6 +159,12 @@ function animateCanvasAndStripes() {
     if (stripesAnimation) {
       stripesAnimation.scrollTrigger.kill();
     }
+    // if (resetCanvasAnimation) {
+    //   resetCanvasAnimation.scrollTrigger.kill();
+    // }
+    // if (resetStripesAnimation) {
+    //   resetStripesAnimation.scrollTrigger.kill();
+    // }
 
     let xOffset;
 
@@ -161,7 +183,7 @@ function animateCanvasAndStripes() {
     }
 
     canvasAnimation = gsap.fromTo(
-      canvasContainer,
+      ".canvas-container",
       {
         x: 0,
       },
@@ -193,6 +215,42 @@ function animateCanvasAndStripes() {
         },
       }
     );
+
+    // The stripes do not work properly on refreshing the page.
+    // resetCanvasAnimation = gsap.fromTo(
+    //   ".canvas-container",
+    //   {
+    //     x: xOffset,
+    //   },
+    //   {
+    //     x: 0,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: "#breakpoint2",
+    //       start: "top center",
+    //       end: "bottom center",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
+    // resetStripesAnimation = gsap.fromTo(
+    //   ".stripe__one, .stripe__two, .stripe__three",
+    //   {
+    //     x: xOffset,
+    //   },
+    //   {
+    //     x: 0,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: "#breakpoint2",
+    //       start: "top center",
+    //       end: "bottom center",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
   }
 
   resetAnimations();
