@@ -50,6 +50,51 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
+  ".reviews-section",
+  {
+    opacity: 0,
+    x: -800,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    delay: 2.75,
+    ease: "expo.inOut",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(
+  "#reviews_q",
+  {
+    opacity: 0,
+    x: 800,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    delay: 2.75,
+    ease: "expo.inOut",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(
+  "#features_q",
+  {
+    opacity: 0,
+    x: 800,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    delay: 2.75,
+    ease: "expo.inOut",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(
   ".main-content__order__button",
   {
     opacity: 0,
@@ -76,11 +121,12 @@ gsap.fromTo(
   {
     opacity: 1,
     x: 0,
-    delay: 3.25,
+    delay: 2.75,
     ease: "expo.inOut",
     duration: 1,
   }
 );
+
 ///// ScrollTriggers
 gsap.registerPlugin(ScrollTrigger);
 
