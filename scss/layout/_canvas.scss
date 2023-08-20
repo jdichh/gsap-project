@@ -63,23 +63,23 @@
 
   @include mixins.sm-510 {
     top: 40vh;
-    margin-left: 2rem;
+    margin-left: 3.5rem;
     height: 75vw;
-    width: 89vw;
+    width: 85vw;
   }
 
   @include mixins.xs-480 {
-    margin-left: 2rem;
+    margin-left: 3.5rem;
     height: 75vw;
-    width: 86vw;
-    top: 35vh;
+    width: 84vw;
+    top: 31vh;
   }
 
   @include mixins.xxs-max-479 {
-    margin-left: 2rem;
+    margin-left: 1rem;
     height: 75vw;
-    width: 86vw;
-    top: 30vh;
+    width: 90vw;
+    top: 25vh;
   }
 }
 

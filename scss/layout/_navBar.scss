@@ -39,6 +39,19 @@ nav {
     }
   }
 
+  @include mixins.md-768 {
+    .logo {
+      padding-left: 1rem;
+      #theme-toggle {
+        width: 30px;
+        height: 30px;
+      }
+      .logo__name {
+        display: none;
+      }
+    }
+  }
+
   @include mixins.sm-510 {
     .logo {
       padding-left: 1rem;

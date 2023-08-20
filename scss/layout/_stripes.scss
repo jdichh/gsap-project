@@ -31,8 +31,22 @@
 
     @include mixins.md-768 {
       width: 0.4rem;
-      margin-left: 10px;
+      margin-left: 15px;
     }
+
+    @include mixins.sm-510 {
+      width: 0.4rem;
+      margin-left: 15px;
+    }
+
+    @include mixins.xs-480 {
+      width: 0.4rem;
+      margin-left: 15px;
+    }
+
+    @include mixins.xxs-max-479 {
+      display: none;
+  }
   }
 
   .stripe__two {
@@ -65,9 +79,22 @@
 
     @include mixins.md-768 {
       width: 0.4rem;
-      margin-left: 20px;
+      margin-left: 25px;
     }
 
+    @include mixins.sm-510 {
+      width: 0.4rem;
+      margin-left: 25px;
+    }
+
+    @include mixins.xs-480 {
+      width: 0.4rem;
+      margin-left: 25px;
+    }
+
+    @include mixins.xxs-max-479 {
+      display: none;
+    }
   }
 
   .stripe__three {
@@ -99,8 +126,21 @@
 
     @include mixins.md-768 {
       width: 0.4rem;
-      margin-left: 30px;
+      margin-left: 35px;
     }
 
+    @include mixins.sm-510 {
+      width: 0.4rem;
+      margin-left: 35px;
+    }
+
+    @include mixins.xs-480 {
+      width: 0.4rem;
+      margin-left: 35px;
+    }
+
+    @include mixins.xxs-max-479 {
+      display: none;
+  }
   }
 }
