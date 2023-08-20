@@ -27,9 +27,12 @@
       }
 
       .reviews-content__text {
-        text-align: left;
-        font-size: 1.2rem;
-        line-height: 1.6;
+        p {
+          text-align: left;
+          font-size: 1.2rem;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
         // outline: 1px solid red;
       }
     }

@@ -1,5 +1,6 @@
 @use "../global/typography";
 @use "../global/colors";
+@use "./mixins";
 
 #features {
   display: flex;
@@ -12,26 +13,62 @@
     display: flex;
     align-items: center;
 
+    @include mixins.xxs-max-479 {
+      height: 50vh;
+      margin-bottom: 7vh;
+    }
+
     .features-content {
       margin-inline: 1rem;
       width: 100%;
       max-width: 850px;
       position: relative;
       padding: 1rem;
+      
+      @include mixins.xxs-max-479 {
+        top: 27vh;
+        padding: 0;
+      }
 
       .features-content__title {
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
-        // outline: 1px solid red;
+          // outline: 1px solid red;
+        @include mixins.xxs-max-479 {
+          text-align: center;
+          font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+        }
       }
 
       .features-content__text {
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.6;
-        // outline: 1px solid red;
+          // outline: 1px solid red;
+        @include mixins.xxs-max-479 {
+          text-align: left;
+          line-height: 1.2;
+          font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
+        }
       }
     }
+  }
+}
+
+.gear-rating {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: spin 3s linear infinite
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

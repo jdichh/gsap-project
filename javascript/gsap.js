@@ -81,7 +81,6 @@ gsap.fromTo(
     duration: 1,
   }
 );
-
 ///// ScrollTriggers
 gsap.registerPlugin(ScrollTrigger);
 

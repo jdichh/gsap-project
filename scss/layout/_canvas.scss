@@ -32,7 +32,7 @@
 
   @include mixins.uw-2560 {
     margin-left: 9rem;
-    width: 57.5vh;
+    height: 57.5vh;
     width: 24vw;
   }
 
@@ -76,9 +76,9 @@
   }
 
   @include mixins.xxs-max-479 {
-    margin-left: 1rem;
+    margin-inline: 0.5rem;
     height: 75vw;
-    width: 90vw;
+    width: 95vw;
     top: 25vh;
   }
 }

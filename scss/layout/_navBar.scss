@@ -13,7 +13,7 @@ nav {
   border-bottom: 1px solid colors.$vintage-black;
   width: 100vw;
   margin: 0 auto;
-  transition: 0.2s;
+  transition: 0.2s ease;
   z-index: 800;
 
   &.light {
@@ -43,11 +43,8 @@ nav {
     .logo {
       padding-left: 1rem;
       #theme-toggle {
-        width: 30px;
-        height: 30px;
-      }
-      .logo__name {
-        display: none;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -79,6 +76,9 @@ nav {
   }
 
   @include mixins.xxs-max-479 {
+    .home-button {
+      display: none;
+    }
     .logo {
       padding-left: 1rem;
       #theme-toggle {
@@ -98,8 +98,21 @@ nav {
   li {
     cursor: pointer;
     display: inline-block;
-    transition: 0.2s;
+    transition: 0.2s ease;
     padding-inline: 2rem;
+
+    @include mixins.md-768 {
+      padding-inline: 1rem;
+    }
+
+    @include mixins.xs-480 {
+      padding-inline: 1rem;
+    }
+
+    @include mixins.xxs-max-479 {
+      padding-inline: 0.5rem;
+    }
+
     &:hover {
       color: colors.$light-gold;
     }

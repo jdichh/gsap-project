@@ -32,8 +32,8 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.autoUpdate = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.5;
+renderer.toneMapping = THREE.ReinhardToneMapping;
+renderer.toneMappingExposure = 0.4;
 
 renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -62,7 +62,7 @@ Promise.all([
     // Negative for downwards, positive for upwards.
     watch.rotation.z = 0.1;
 
-    watch.scale.set(1.1, 1.1, 1.1);
+    watch.scale.set(1.15, 1.15, 1.15);
 
     /// Enable watch to cast and receive shadows.
     watch.traverse((child) => {
@@ -218,7 +218,7 @@ window.addEventListener("resize", () => {
 
   let scaleFactor = Math.min(width, height) / 900;
 
-  const minScale = 1;
+  const minScale = 1.1;
   const maxScale = 1.5; 
   scaleFactor = Math.max(minScale, Math.min(maxScale, scaleFactor));
 
@@ -384,7 +384,7 @@ rearSpotlight.distance = spotlightParams.rearSpotlightDistance;
 ///// Main Stuff
 const controls = new OrbitControls(camera, container);
 controls.enableDamping = true;
-controls.autoRotate = false;
+controls.autoRotate = true;
 controls.autoRotateSpeed = 1;
 controls.enablePan = false;
 controls.maxDistance = 20;
