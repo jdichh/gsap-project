@@ -8,21 +8,25 @@
   align-items: flex-end;
 
   .feature-section {
-    outline: 1px solid blue;
+   // outline: 1px solid blue;
     height: 100vh;
     display: flex;
     align-items: center;
 
     @include mixins.xxs-max-479 {
-      height: 76vh;
-    }
-
-    @include mixins.md-768 {
       height: 70vh;
     }
 
+    @include mixins.xs-480 {
+      height: 72vh;
+    }
+
+    @include mixins.md-768 {
+      height: 74vh;
+    }
+
     @include mixins.lg-992 {
-      height: 80vh;
+      height: 76vh;
     }
 
     .features-content {
@@ -31,7 +35,7 @@
       max-width: 850px;
       position: relative;
       padding: 1rem;
-      outline: 1px solid blue;
+    //  outline: 1px solid blue;
       
       @include mixins.xxs-max-479 {
         margin-top: 10rem;
@@ -60,7 +64,7 @@
         font-family: "Old Standard TT", serif;
         font-size: 2.5rem;
         text-align: right;
-        outline: 1px solid blue;
+      //  outline: 1px solid blue;
 
         @include mixins.xxs-max-479 {
           text-align: center;
@@ -85,7 +89,7 @@
         text-align: right;
         font-size: 1.2rem;
         line-height: 1.3;
-        outline: 1px solid blue;
+       // outline: 1px solid blue;
         
         @include mixins.xxs-max-479 {
           text-align: left;

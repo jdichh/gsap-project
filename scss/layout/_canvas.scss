@@ -11,7 +11,7 @@
   overflow: hidden;
   z-index: 3;
   pointer-events: none;
-  outline: 1px solid red;
+  //outline: 1px solid red;
 
   @include mixins.uw-5120 {
     margin-left: 0;
