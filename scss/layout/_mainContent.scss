@@ -12,7 +12,7 @@
   align-items: flex-end;
 
   .main-section {
-    outline: 1px solid green;
+    outline: 1px solid blue;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -23,10 +23,17 @@
       max-width: 850px;
       position: relative;
       padding: 1rem;
-      outline: 1px solid red;
+      outline: 1px solid green;
       
       @include mixins.xxs-max-479 {
         margin-top: 40rem;
+        margin-bottom: 20rem;
+        padding: 0;
+      }
+
+      @include mixins.xs-480 {
+        margin-left: 3rem;
+        margin-top: 50rem;
         margin-bottom: 20rem;
         padding: 0;
       }
@@ -36,6 +43,7 @@
         font-size: 2.5rem;
         text-align: right;
         outline: 1px solid red;
+
         @include mixins.xxs-max-479 {
           .the-the {
             display: none;
@@ -43,6 +51,11 @@
           text-align: center;
           font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
         }
+
+        @include mixins.xs-480 {
+          font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
+        }
+
       }
 
       .main-content__text {
@@ -50,11 +63,17 @@
         font-size: 1.2rem;
         line-height: 1.6;
         outline: 1px solid red;
+
         @include mixins.xxs-max-479 {
           text-align: left;
           line-height: 1.3;
           font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
         }
+
+        @include mixins.xs-480 {
+          font-size: clamp(1rem, -1.069rem + 6.8966vw, 1.125rem);
+        }
+
       }
     }
   }
