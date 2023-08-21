@@ -65,7 +65,7 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
-  "#reviews_q",
+  ".question-section",
   {
     opacity: 0,
     x: 800,
@@ -80,22 +80,7 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
-  "#features_q",
-  {
-    opacity: 0,
-    x: 800,
-  },
-  {
-    opacity: 1,
-    x: 0,
-    delay: 2.75,
-    ease: "expo.inOut",
-    duration: 1,
-  }
-);
-
-gsap.fromTo(
-  "#purchase_q",
+  ".purchase_prompt",
   {
     opacity: 0,
     x: -800,
@@ -169,17 +154,17 @@ function animateCanvasAndStripes() {
     let xOffset;
 
     if (window.innerWidth >= 5120) {
-      xOffset = window.innerWidth * 0.325;
+      xOffset = window.innerWidth * 0.2;
     } else if (window.innerWidth >= 3840) {
-      xOffset = window.innerWidth * 0.425;
+      xOffset = window.innerWidth * 0.27;
     } else if (window.innerWidth >= 3440) {
-      xOffset = window.innerWidth * 0.475;
+      xOffset = window.innerWidth * 0.3;
     } else if (window.innerWidth >= 2560) {
       xOffset = window.innerWidth * 0.425;
     } else if (window.innerWidth >= 1920) {
-      xOffset = window.innerWidth * 0.6;
+      xOffset = window.innerWidth * 0.57;
     } else if (window.innerWidth >= 1200) {
-      xOffset = window.innerWidth * 0.55;
+      xOffset = window.innerWidth * 0.59;
     }
 
     canvasAnimation = gsap.fromTo(

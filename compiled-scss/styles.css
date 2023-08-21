@@ -498,7 +498,7 @@ body {
 
 .canvas-container {
   position: absolute;
-  top: 55%;
+  top: 52.5%;
   transform: translateY(-50%);
   margin-left: 5rem;
   height: 65vh;
@@ -800,7 +800,6 @@ nav .logo .logo__h1 {
   #main .main-section .main-content {
     top: 36vh;
     margin-bottom: 20rem;
-    padding: 0;
   }
 }
 @media (min-width: 480px) and (max-width: 509px) {
@@ -808,28 +807,28 @@ nav .logo .logo__h1 {
     margin-left: 3rem;
     top: 43vh;
     margin-bottom: 20rem;
-    padding: 0;
   }
 }
 @media (min-width: 510px) and (max-width: 767px) {
   #main .main-section .main-content {
     top: 36vh;
     margin-left: 3rem;
-    padding: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #main .main-section .main-content {
     top: 44vh;
     margin-left: 3rem;
-    padding: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   #main .main-section .main-content {
-    top: 24vh;
-    margin-left: 3rem;
-    padding: 0;
+    top: 26vh;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #main .main-section .main-content {
+    max-width: 650px;
   }
 }
 #main .main-section .main-content .main-content__title {
@@ -862,16 +861,20 @@ nav .logo .logo__h1 {
     font-size: clamp(1.625rem, 1.1945rem + 0.8969vw, 1.75rem);
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  #main .main-section .main-content .main-content__title {
+    top: 26vh;
+  }
+}
 #main .main-section .main-content .main-content__text {
   text-align: right;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.3;
   outline: 1px solid red;
 }
 @media (max-width: 479px) {
   #main .main-section .main-content .main-content__text {
     text-align: left;
-    line-height: 1.3;
     font-size: clamp(1rem, 0.7484rem + 1.2579vw, 1.125rem);
   }
 }
@@ -890,6 +893,26 @@ nav .logo .logo__h1 {
     font-size: clamp(1.125rem, 0.6945rem + 0.8969vw, 1.25rem);
   }
 }
+@media (min-width: 2560px) and (max-width: 3439px) {
+  #main .main-section .main-content .main-content__text {
+    font-size: clamp(1.75rem, 1.3859rem + 0.2275vw, 1.875rem);
+  }
+}
+@media (min-width: 3440px) and (max-width: 3839px) {
+  #main .main-section .main-content .main-content__text {
+    font-size: clamp(1.875rem, 0.7973rem + 0.5013vw, 2rem);
+  }
+}
+@media (min-width: 3840px) and (max-width: 5119px) {
+  #main .main-section .main-content .main-content__text {
+    font-size: clamp(2rem, 1.625rem + 0.1563vw, 2.125rem);
+  }
+}
+@media (min-width: 5120px) {
+  #main .main-section .main-content .main-content__text {
+    font-size: clamp(2.125rem, 1.9167rem + 0.0651vw, 2.25rem);
+  }
+}
 
 #features {
   display: flex;
@@ -902,9 +925,19 @@ nav .logo .logo__h1 {
   display: flex;
   align-items: center;
 }
+@media (max-width: 479px) {
+  #features .feature-section {
+    height: 76vh;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   #features .feature-section {
     height: 70vh;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #features .feature-section {
+    height: 80vh;
   }
 }
 #features .feature-section .features-content {
@@ -918,7 +951,6 @@ nav .logo .logo__h1 {
 @media (max-width: 479px) {
   #features .feature-section .features-content {
     margin-top: 10rem;
-    padding: 0;
   }
 }
 @media (min-width: 480px) and (max-width: 509px) {
@@ -936,6 +968,11 @@ nav .logo .logo__h1 {
 @media (min-width: 768px) and (max-width: 991px) {
   #features .feature-section .features-content {
     margin-left: 3rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #features .feature-section .features-content {
+    max-width: 650px;
   }
 }
 #features .feature-section .features-content .features-content__title {
@@ -969,7 +1006,7 @@ nav .logo .logo__h1 {
 #features .feature-section .features-content .features-content__text {
   text-align: right;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.3;
   outline: 1px solid blue;
 }
 @media (max-width: 479px) {
@@ -992,6 +1029,26 @@ nav .logo .logo__h1 {
 @media (min-width: 768px) and (max-width: 991px) {
   #features .feature-section .features-content .features-content__text {
     font-size: clamp(1.125rem, 0.6945rem + 0.8969vw, 1.25rem);
+  }
+}
+@media (min-width: 2560px) and (max-width: 3439px) {
+  #features .feature-section .features-content .features-content__text {
+    font-size: clamp(1.75rem, 1.3859rem + 0.2275vw, 1.875rem);
+  }
+}
+@media (min-width: 3440px) and (max-width: 3839px) {
+  #features .feature-section .features-content .features-content__text {
+    font-size: clamp(1.875rem, 0.7973rem + 0.5013vw, 2rem);
+  }
+}
+@media (min-width: 3840px) and (max-width: 5119px) {
+  #features .feature-section .features-content .features-content__text {
+    font-size: clamp(2rem, 1.625rem + 0.1563vw, 2.125rem);
+  }
+}
+@media (min-width: 5120px) {
+  #features .feature-section .features-content .features-content__text {
+    font-size: clamp(2.125rem, 1.9167rem + 0.0651vw, 2.25rem);
   }
 }
 
@@ -1018,15 +1075,30 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  #reviews {
+    margin-left: 5rem;
+  }
+}
 #reviews .reviews-section {
   outline: 1px solid violet;
   height: 100vh;
   display: flex;
   align-items: center;
 }
+@media (max-width: 479px) {
+  #reviews .reviews-section {
+    height: 76vh;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   #reviews .reviews-section {
     height: 70vh;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #reviews .reviews-section {
+    height: 80vh;
   }
 }
 #reviews .reviews-section .reviews-content {
@@ -1040,7 +1112,6 @@ body {
 @media (max-width: 479px) {
   #reviews .reviews-section .reviews-content {
     margin-top: 10rem;
-    padding: 0;
   }
 }
 @media (min-width: 480px) and (max-width: 509px) {
@@ -1058,6 +1129,11 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
   #reviews .reviews-section .reviews-content {
     margin-left: 3rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #reviews .reviews-section .reviews-content {
+    max-width: 650px;
   }
 }
 #reviews .reviews-section .reviews-content .reviews-content__rating {
@@ -1102,7 +1178,7 @@ body {
 #reviews .reviews-section .reviews-content .reviews-content__text p {
   text-align: left;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 @media (max-width: 479px) {
@@ -1125,6 +1201,26 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
   #reviews .reviews-section .reviews-content .reviews-content__text p {
     font-size: clamp(1.125rem, 0.6945rem + 0.8969vw, 1.25rem);
+  }
+}
+@media (min-width: 2560px) and (max-width: 3439px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    font-size: clamp(1.75rem, 1.3859rem + 0.2275vw, 1.875rem);
+  }
+}
+@media (min-width: 3440px) and (max-width: 3839px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    font-size: clamp(1.875rem, 0.7973rem + 0.5013vw, 2rem);
+  }
+}
+@media (min-width: 3840px) and (max-width: 5119px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    font-size: clamp(2rem, 1.625rem + 0.1563vw, 2.125rem);
+  }
+}
+@media (min-width: 5120px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    font-size: clamp(2.125rem, 1.9167rem + 0.0651vw, 2.25rem);
   }
 }
 
@@ -1169,6 +1265,12 @@ body {
     margin-top: 6rem;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  #features_q .question-section, #purchase_q .question-section,
+  #reviews_q .question-section {
+    margin-top: 7rem;
+  }
+}
 #features_q .question-section .question-content, #purchase_q .question-section .question-content,
 #reviews_q .question-section .question-content {
   margin-inline: 1rem;
@@ -1193,6 +1295,12 @@ body {
   #features_q .question-section .question-content, #purchase_q .question-section .question-content,
   #reviews_q .question-section .question-content {
     margin-top: 2rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #features_q .question-section .question-content, #purchase_q .question-section .question-content,
+  #reviews_q .question-section .question-content {
+    max-width: 650px;
   }
 }
 #features_q .question-section .question-content .question-content__title, #purchase_q .question-section .question-content .question-content__title,
@@ -1252,6 +1360,11 @@ body {
 #purchase_q {
   align-items: flex-start;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  #purchase_q {
+    margin-left: 5rem;
+  }
+}
 @media (min-width: 510px) and (max-width: 767px) {
   #purchase_q .question-section .question-content {
     margin-top: 16rem;
@@ -1261,6 +1374,11 @@ body {
   #purchase_q .question-section .question-content {
     margin-top: 9rem;
     margin-left: 3rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #purchase_q .question-section .question-content {
+    margin-top: 16rem;
   }
 }
 #purchase_q .question-section .question-content .question-content__title {
