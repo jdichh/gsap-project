@@ -31,6 +31,11 @@
         margin-left: 3rem;
       }
 
+      @include mixins.sm-510 {
+        margin-top: 20rem;
+        margin-left: 3rem;
+      }
+
       .reviews-content__rating {
         outline: 1px solid violet;
         text-align: left;
@@ -54,6 +59,10 @@
         @include mixins.xs-480 {
           font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
         }
+        
+        @include mixins.sm-510 {
+          font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
+        }
       }
 
       .reviews-content__text {
@@ -71,6 +80,10 @@
 
           @include mixins.xs-480 {
             font-size: clamp(1rem, -1.069rem + 6.8966vw, 1.125rem);
+          }
+
+          @include mixins.sm-510 {
+            font-size: clamp(1.125rem, 0.8769rem + 0.7782vw, 1.25rem);
           }
         }
         outline: 1px solid violet;

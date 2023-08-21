@@ -567,26 +567,26 @@ body {
 }
 @media (min-width: 510px) and (max-width: 767px) {
   .canvas-container {
-    top: 40vh;
-    margin-left: 3.5rem;
-    height: 75vw;
-    width: 85vw;
+    top: 34vh;
+    margin-left: 3rem;
+    height: 48vh;
+    width: 88vw;
   }
 }
 @media (min-width: 480px) and (max-width: 509px) {
   .canvas-container {
     margin-left: 3.5rem;
-    height: 75vw;
+    height: 40vh;
     width: 84vw;
     top: 31vh;
   }
 }
 @media (max-width: 479px) {
   .canvas-container {
-    margin-inline: 0.5rem;
-    height: 75vw;
-    width: 95vw;
-    top: 25vh;
+    margin-inline: 1rem;
+    height: 35vh;
+    width: 94vw;
+    top: 27vh;
   }
 }
 
@@ -809,6 +809,13 @@ nav .logo .logo__h1 {
     padding: 0;
   }
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #main .main-section .main-content {
+    margin-top: 38rem;
+    margin-left: 3rem;
+    padding: 0;
+  }
+}
 #main .main-section .main-content .main-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
@@ -829,6 +836,11 @@ nav .logo .logo__h1 {
     font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
   }
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #main .main-section .main-content .main-content__title {
+    font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
+  }
+}
 #main .main-section .main-content .main-content__text {
   text-align: right;
   font-size: 1.2rem;
@@ -845,6 +857,11 @@ nav .logo .logo__h1 {
 @media (min-width: 480px) and (max-width: 509px) {
   #main .main-section .main-content .main-content__text {
     font-size: clamp(1rem, -1.069rem + 6.8966vw, 1.125rem);
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #main .main-section .main-content .main-content__text {
+    font-size: clamp(1.125rem, 0.8769rem + 0.7782vw, 1.25rem);
   }
 }
 
@@ -879,6 +896,12 @@ nav .logo .logo__h1 {
     margin-left: 3rem;
   }
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #features .feature-section .features-content {
+    margin-top: 20rem;
+    margin-left: 3rem;
+  }
+}
 #features .feature-section .features-content .features-content__title {
   font-family: "Old Standard TT", serif;
   font-size: 2.5rem;
@@ -894,6 +917,12 @@ nav .logo .logo__h1 {
 @media (min-width: 480px) and (max-width: 509px) {
   #features .feature-section .features-content .features-content__title {
     font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #features .feature-section .features-content .features-content__title {
+    margin-left: 3rem;
+    font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
   }
 }
 #features .feature-section .features-content .features-content__text {
@@ -912,6 +941,11 @@ nav .logo .logo__h1 {
 @media (min-width: 480px) and (max-width: 509px) {
   #features .feature-section .features-content .features-content__text {
     font-size: clamp(1rem, -1.069rem + 6.8966vw, 1.125rem);
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #features .feature-section .features-content .features-content__text {
+    font-size: clamp(1.125rem, 0.8769rem + 0.7782vw, 1.25rem);
   }
 }
 
@@ -964,6 +998,12 @@ body {
     margin-left: 3rem;
   }
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #reviews .reviews-section .reviews-content {
+    margin-top: 20rem;
+    margin-left: 3rem;
+  }
+}
 #reviews .reviews-section .reviews-content .reviews-content__rating {
   outline: 1px solid violet;
   text-align: left;
@@ -990,6 +1030,11 @@ body {
     font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
   }
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #reviews .reviews-section .reviews-content .reviews-content__title {
+    font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
+  }
+}
 #reviews .reviews-section .reviews-content .reviews-content__text {
   outline: 1px solid violet;
 }
@@ -1009,6 +1054,11 @@ body {
 @media (min-width: 480px) and (max-width: 509px) {
   #reviews .reviews-section .reviews-content .reviews-content__text p {
     font-size: clamp(1rem, -1.069rem + 6.8966vw, 1.125rem);
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #reviews .reviews-section .reviews-content .reviews-content__text p {
+    font-size: clamp(1.125rem, 0.8769rem + 0.7782vw, 1.25rem);
   }
 }
 
@@ -1041,6 +1091,12 @@ body {
   display: flex;
   align-items: center;
 }
+@media (min-width: 510px) and (max-width: 767px) {
+  #features_q .question-section, #purchase_q .question-section,
+  #reviews_q .question-section {
+    margin-top: 10rem;
+  }
+}
 #features_q .question-section .question-content, #purchase_q .question-section .question-content,
 #reviews_q .question-section .question-content {
   margin-inline: 1rem;
@@ -1059,6 +1115,12 @@ body {
   #features_q .question-section .question-content, #purchase_q .question-section .question-content,
   #reviews_q .question-section .question-content {
     margin-top: 14rem;
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #features_q .question-section .question-content, #purchase_q .question-section .question-content,
+  #reviews_q .question-section .question-content {
+    margin-top: 20rem;
   }
 }
 #features_q .question-section .question-content .question-content__title, #purchase_q .question-section .question-content .question-content__title,
@@ -1085,6 +1147,13 @@ body {
   #reviews_q .question-section .question-content .question-content__title {
     margin-left: 3rem;
     font-size: clamp(1.375rem, -0.694rem + 6.8966vw, 1.5rem);
+  }
+}
+@media (min-width: 510px) and (max-width: 767px) {
+  #features_q .question-section .question-content .question-content__title, #purchase_q .question-section .question-content .question-content__title,
+  #reviews_q .question-section .question-content .question-content__title {
+    margin-left: 3rem;
+    font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
   }
 }
 #features_q .question-section .question-content .question-content__text, #purchase_q .question-section .question-content .question-content__text,
