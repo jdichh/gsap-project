@@ -18,6 +18,10 @@
       margin-top: 10rem;
     }
 
+    @include mixins.md-768 {
+      margin-top: 6rem;
+    }
+
     .question-content {
       margin-inline: 1rem;
       width: 100%;
@@ -26,7 +30,7 @@
       padding: 1rem;
 
       @include mixins.xxs-max-479 {
-        padding: 0;
+        margin-top: 6rem;
       }
 
       @include mixins.xs-480 {
@@ -34,7 +38,7 @@
       }
 
       @include mixins.sm-510 {
-        margin-top: 20rem;
+        margin-top: 2rem;
       }
 
       .question-content__title {
@@ -63,6 +67,10 @@
           font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
         }
 
+        @include mixins.md-768 {
+          font-size: clamp(1.625rem, 1.1945rem + 0.8969vw, 1.75rem);
+        }
+
       }
 
       .question-content__text {
@@ -87,6 +95,16 @@
 
   .question-section {
     .question-content {
+
+      @include mixins.sm-510 {
+        margin-top: 16rem;
+      }
+      
+      @include mixins.md-768 {
+        margin-top: 9rem;
+        margin-left: 3rem;
+      }
+  
       .question-content__title {
         text-align: left;
         .question {

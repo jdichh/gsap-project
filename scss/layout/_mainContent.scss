@@ -24,22 +24,34 @@
       position: relative;
       padding: 1rem;
       outline: 1px solid green;
-      
+
       @include mixins.xxs-max-479 {
-        margin-top: 40rem;
+        top: 36vh;
         margin-bottom: 20rem;
         padding: 0;
       }
 
       @include mixins.xs-480 {
         margin-left: 3rem;
-        margin-top: 50rem;
+        top: 43vh;
         margin-bottom: 20rem;
         padding: 0;
       }
 
       @include mixins.sm-510 {
-        margin-top: 38rem;
+        top: 36vh;
+        margin-left: 3rem;
+        padding: 0;
+      }
+
+      @include mixins.md-768 {
+        top: 44vh;
+        margin-left: 3rem;
+        padding: 0;
+      }
+
+      @include mixins.md-768 {
+        top: 24vh;
         margin-left: 3rem;
         padding: 0;
       }
@@ -66,6 +78,9 @@
           font-size: clamp(1.5rem, 1.2519rem + 0.7782vw, 1.625rem);
         }
 
+        @include mixins.md-768 {
+          font-size: clamp(1.625rem, 1.1945rem + 0.8969vw, 1.75rem);
+        }
       }
 
       .main-content__text {
@@ -88,6 +103,9 @@
           font-size: clamp(1.125rem, 0.8769rem + 0.7782vw, 1.25rem);
         }
 
+        @include mixins.md-768 {
+          font-size: clamp(1.125rem, 0.6945rem + 0.8969vw, 1.25rem);
+        }
       }
     }
   }
