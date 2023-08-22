@@ -1,1 +1,2 @@
-﻿# A project about a wristwatch that uses both Three.js and GSAP.
+﻿# Khronomechanica Vintora | Steampunk Watch Landing Page
+Made with Three.js and GSAP. Just for practicing purposes.
