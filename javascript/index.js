@@ -25,7 +25,8 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   alpha: true,
-  //antialias: true,
+  antialias: true,
+  precision: "mediump"
 });
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.autoUpdate = true;
