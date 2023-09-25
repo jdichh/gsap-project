@@ -8,6 +8,15 @@ Some challenges I faced were:
   <li>Aligning the stripes behind the 3D model based on the user agent's (browser) width.</li>
 </ul>
 
-
-
 [Development Footage](https://drive.google.com/drive/folders/1Cch-eDcga3LYIGnze3uUez6lN5RWrRtv?usp=drive_link)
+
+## Project setup
+If you want to try this out for yourself, download the source code, open the folder in VSCode/VSCodium, and run these lines of code.
+```
+pnpm install
+```
+
+### Compiles and hot-reloads for development
+```
+pnpm run dev
+```
